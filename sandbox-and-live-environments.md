@@ -4,7 +4,7 @@ description: >-
   live.
 ---
 
-# Sandbox and Test Cards
+# Testing
 
 IntaSend provides both staging and live environments.
 

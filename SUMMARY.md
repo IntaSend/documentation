@@ -1,35 +1,35 @@
 # Table of contents
 
-* [Introduction](README.md)
-* [Sandbox and Test Cards](sandbox-and-live-environments.md)
-
-## Payment Collection
-
-* [Payment Links](payment-collection/payment-links.md)
-* [Website Integration](payment-collection/web-inline-sdk.md)
-* [Collection API \(Advance\)](payment-collection/collection-api.md)
-
-## API Prerequisite
-
-* [API Authentication](api-prerequisite/api-authentication.md)
-
-## Refunds
-
-* [Card Chargebacks](refunds/card-chargebacks.md)
-
-## Transfers API <a id="apis"></a>
-
-* [Send Money](apis/single-payment.md)
-* [Send Money Status](apis/payment-status.md)
-* [Extra Authentication \(PSD2\)](apis/extra-payment-authentication.md)
-
-## Accounts & Wallets <a id="accounts"></a>
-
-* [Wallets and Balance API](accounts/wallets-api.md)
-* [Fund Account](accounts/fund-account.md)
-
-## Resources
-
-* [Support and Production Setup](resources/api-support.md)
-* [Errors](resources/errors.md)
+* [Overview](README.md)
+* [Card and Mobile Payments](online-payments/README.md)
+  * [How to collect card payment](online-payments/how-to-collect-funds.md)
+  * [Sample integration](online-payments/sample-integration.md)
+  * [Collect a payment](online-payments/payment-button.md)
+  * [Payment data parameters](online-payments/payment-data-parameters.md)
+  * [Payment results](online-payments/payment-results.md)
+  * [Using a custom button](online-payments/using-a-custom-button.md)
+  * [Express check-out](online-payments/express-checkout.md)
+  * [Direct M-Pesa STK-Push](online-payments/collection-api.md)
+  * [React/Vue/Yarn/NPM](online-payments/react-vue-javascript.md)
+  * [WordPress](online-payments/wordpress.md)
+  * [WooCommerce](online-payments/woocommerce.md)
+  * [Flutter \(Mobile\)](online-payments/flutter-mobile.md)
+  * [Bubble.io \(no-code\)](online-payments/bubble.io-no-code.md)
+* [Send Payments](send-payments/README.md)
+  * [How does it work](send-payments/how-does-it-work.md)
+  * [Authentication](send-payments/api-authentication.md)
+  * [PSD2 and Digital Keys](send-payments/extra-payment-authentication.md)
+  * [Send Money](send-payments/send-money.md)
+  * [Send Money Status](send-payments/payment-status.md)
+* [Wallet as a service](wallet-as-a-service/README.md)
+  * [How does it work](wallet-as-a-service/how-does-it-work.md)
+  * [Wallets API](wallet-as-a-service/wallets-api.md)
+* [Refunds](card-chargebacks.md)
+* [WebHooks](webhooks.md)
+* [REST API Plugins and SDKs](plugins-and-sdks/README.md)
+  * [IntaSend Python](plugins-and-sdks/python.md)
+  * [PHP SDK](plugins-and-sdks/php-sdk.md)
+* [Testing](sandbox-and-live-environments.md)
+* [Errors reference](errors.md)
+* [Support](api-support.md)
 
