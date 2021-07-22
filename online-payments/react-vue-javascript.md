@@ -32,7 +32,7 @@ const intaSendInstance = new IntaSend({
 
 ## 4. Load payment screen
 
-The `.run()` method will load the payment popup. Feel free to set the payment setting e.g the amount and currency based on your need. Here is a [reference](payment-data-parameters.md) of more options you can add.
+The `.run()` method will load the payment popup. Feel free to set the payment setting e.g the amount and currency based on your need. Here is a [reference](payment-data-parameters.md) of options you can add.
 
 ```text
 // Load payment popup with the run() function
