@@ -22,5 +22,5 @@ We provide various tools for payment collection including payment links that you
 
 Use our transfer API to safely send mobile money and IntaSend and P2P transfers. The API is REST-based and requires authentication. Here are quick links to help you get started.
 
-{% page-ref page="send-payments/" %}
+{% page-ref page="send-payments/payment-status.md" %}
 
