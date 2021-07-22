@@ -1,5 +1,5 @@
 ---
-description: How to add M-Pesa and card payments to your no-code app.
+description: How to M-Pesa and card payments to your no-code app.
 ---
 
 # Bubble.io \(no-code\)
