@@ -1,0 +1,45 @@
+---
+description: >-
+  The following are details on how to develop and test the APIs before going
+  live.
+---
+
+# Sandbox and Test Cards
+
+IntaSend provides both staging and live environments.
+
+All requests and callback URLs to this environment must be made through a secure network protocol \(HTTPS\). 
+
+### Sandbox / Development Environment
+
+Sign up for the **sandbox environment** for your development and testing.
+
+**Sign up URL:** [https://sandbox.intasend.com/account/signup/](https://sandbox.intasend.com/account/signup/) ``
+
+**API base URL:** [https://sandbox.intasend.com/api/](https://sandbox.intasend.com/api/)
+
+### **Live environment** for your production.
+
+**Sign up URL:** [https://payment.intasend.com/account/signup/](https://payment.intasend.com/account/signup/) ``
+
+**API base URL:** [https://payment.intasend.com/api/](https://payment.intasend.com/account/signup/)
+
+### Test details for sandbox environment
+
+#### Test card numbers
+
+| Card | Date | CVC |
+| :--- | :--- | :--- |
+| 4000 0000 0000 0002 | Any future date | Any 3 digits |
+| 4242 4242 4242 4242 | Any future date | Any 3 digits |
+| 4000 0000 0000 0101 \(No auth\) | Any future date | Any 3 digits |
+| 4000 0027 6000 3184 \(Auth required\) | Any future date | Any 3 digits |
+| 5555 5555 5555 4444 | Any future date | Any 3 digits |
+| 3714 4963 5398 431 | Any future date | Any 4 digits |
+
+#### Test M-Pesa
+
+Send money test number **254708374149**.
+
+You can use your own number for the M-Pesa deposit/STK push. We are using the M-Pesa developers platform which does a reversal of all test amounts within 48 hours.
+

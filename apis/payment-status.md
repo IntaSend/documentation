@@ -1,0 +1,185 @@
+---
+description: How to obtain send money payment status.
+---
+
+# Send Money Status
+
+{% api-method method="post" host="https://sandbox.intasend.com" path="/api/v1/send-money/status/" %}
+{% api-method-summary %}
+Get send money status
+{% endapi-method-summary %}
+
+{% api-method-description %}
+This endpoint allows you to check payment status.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Authentication" type="string" required=true %}
+Bearer &lt;TOKEN&gt;
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="tracking\_id" type="string" required=true %}
+Transaction tracking\_id returned from send money request
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Payment status
+{% endapi-method-response-example-description %}
+
+```
+{
+    "tracking_id": "6138a6b7-51f6-42e2-86d0-8ca31c286dd8",
+    "status": "Processing payment",
+    "transactions": [
+        {
+            "status": "Pending",
+            "request_reference_id": "9da1df21-b14b-44e3-99fd-573fd939f4dd",
+            "mno_reference": "",
+            "name": null,
+            "phone_number": 254723890323,
+            "amount": 5000,
+            "narrative": null
+        },
+        {
+            "status": "Unsuccessful",
+            "request_reference_id": "ef99a2b4-4cbc-4869-8983-5b7fe5ae0415",
+            "mno_reference": "OFQ31HC99P",
+            "name": null,
+            "phone_number": 254723890353,
+            "amount": 5,
+            "narrative": null
+        }
+    ],
+    "actual_charges": 0,
+    "paid_amount": 0,
+    "failed_amount": 5,
+    "created_at": "2020-06-26T17:37:07.323436+03:00",
+    "updated_at": "2020-06-26T17:37:17.933968+03:00"
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Code examples
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+import requests
+
+url = "https://sandbox.intasend.com/api/v1/send-money/status/"
+
+payload = "{\"tracking_id\": \"6138a6b7-51f6-42e2-86d0-8ca31c286dd8\"}"
+headers = {
+  'Authorization': 'Bearer LfqRDqvfvwv77BhxuDsdXN04NyUx97',
+  'Content-Type': 'application/json'
+}
+
+response = requests.request("POST", url, headers=headers, data = payload)
+
+print(response.text.encode('utf8'))
+
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://sandbox.intasend.com/api/v1/send-money/status/",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS =>"{\"tracking_id\": \"6138a6b7-51f6-42e2-86d0-8ca31c286dd8\"}",
+  CURLOPT_HTTPHEADER => array(
+    "Authorization: Bearer LfqRDqvfvwv77BhxuDsdXN04NyUx97",
+    "Content-Type: application/json"
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+
+```
+{% endtab %}
+
+{% tab title="Go" %}
+```go
+package main
+
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
+
+func main() {
+
+  url := "https://sandbox.intasend.com/api/v1/send-money/status/"
+  method := "POST"
+
+  payload := strings.NewReader("{\"tracking_id\": \"6138a6b7-51f6-42e2-86d0-8ca31c286dd8\"}")
+
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, payload)
+
+  if err != nil {
+    fmt.Println(err)
+  }
+  req.Header.Add("Authorization", "Bearer LfqRDqvfvwv77BhxuDsdXN04NyUx97")
+  req.Header.Add("Content-Type", "application/json")
+  
+  res, err := client.Do(req)
+  defer res.Body.Close()
+  body, err := ioutil.ReadAll(res.Body)
+
+  fmt.Println(string(body))
+}
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+```ruby
+require "uri"
+require "net/http"
+
+url = URI("https://sandbox.intasend.com/api/v1/send-money/status/")
+
+https = Net::HTTP.new(url.host, url.port);
+https.use_ssl = true
+
+request = Net::HTTP::Post.new(url)
+request["Authorization"] = "Bearer LfqRDqvfvwv77BhxuDsdXN04NyUx97"
+request["Content-Type"] = "application/json"
+request.body = "{\"tracking_id\": \"6138a6b7-51f6-42e2-86d0-8ca31c286dd8\"}"
+
+response = https.request(request)
+puts response.read_body
+
+```
+{% endtab %}
+{% endtabs %}
+
+
+
