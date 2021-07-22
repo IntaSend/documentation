@@ -16,7 +16,6 @@
   * [Flutter \(Mobile\)](online-payments/flutter-mobile.md)
   * [Bubble.io \(no-code\)](online-payments/bubble.io-no-code.md)
 * [Send Payments](send-payments/README.md)
-  * [How does it work](send-payments/how-does-it-work.md)
   * [Authentication](send-payments/api-authentication.md)
   * [PSD2 and Digital Keys](send-payments/extra-payment-authentication.md)
   * [Send Money](send-payments/send-money.md)
