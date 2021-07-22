@@ -21,7 +21,6 @@
   * [Send Money](send-payments/send-money.md)
   * [Send Money Status](send-payments/payment-status.md)
 * [Wallet as a service](wallet-as-a-service/README.md)
-  * [How does it work](wallet-as-a-service/how-does-it-work.md)
   * [Wallets API](wallet-as-a-service/wallets-api.md)
 * [Refunds](card-chargebacks.md)
 * [WebHooks](webhooks.md)
