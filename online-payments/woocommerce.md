@@ -8,9 +8,9 @@ description: >-
 
 IntaSend has built a secure payment gateway to power e-commerce sites. IntaSend is platform is secure and PCI-DSS compliant. We have built tools to make integration easier for businesses and developers.
 
-Navigate to [http://54.86.135.148/](http://54.86.135.148/) to test the plugin in a demo WooCoommerce site.
+Ready to add payments to your site? Below is a step-by-step video and guide on how to integrate payment on WooCommerce. Feel free to also test our demo site here [http://54.86.135.148/](http://54.86.135.148/).
 
-Ready to add payments to your site? Below is a step-by-step guide on how to integrate payment on WooCommerce.
+{% embed url="https://www.loom.com/share/644db0fac41541008c5b7c3e4dffb6d4" caption="How to setup and install IntaSend Plugin for WooCommerce" %}
 
 ## 1. Download the latest IntaSend WooCommerce Plugin
 
