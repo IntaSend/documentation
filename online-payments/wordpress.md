@@ -8,7 +8,7 @@ In this guide, you'll learn how to install, activate, and use the IntaSend payme
 
 {% embed url="https://www.loom.com/share/279fae192ae44b86bcf63a3eb44b8ac9" %}
 
-## 1. Download the latest IntaSend plugin for WordPress
+## 1. Download IntaSend plugin for WordPress
 
 Click the following link to download the latest plugin - [https://intasend-public-share.s3.eu-central-1.amazonaws.com/IntaSend-wordpress-plugin.zip](https://intasend-public-share.s3.eu-central-1.amazonaws.com/IntaSend-wordpress-plugin.zip)
 
