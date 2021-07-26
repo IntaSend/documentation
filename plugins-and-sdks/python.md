@@ -2,7 +2,7 @@
 description: Official Python SDK
 ---
 
-# IntaSend Python
+# Python SDK
 
 ## How to install
 

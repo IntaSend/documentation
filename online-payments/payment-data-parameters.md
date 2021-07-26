@@ -24,6 +24,6 @@ This schema is also useful for [custom button integration](using-a-custom-button
 | state | Optional user billing state |
 | zipcode | Optional user billing zipcode |
 | method | Optional - if specified only the method will be used. Options are M-PESA, CARD-PAYMENT. Leave blank to show all payment methods. |
-| card\_tarrif | options are **BUSINESS-PAYS** and **CUSTOMER-PAYS** . Determine pays the card charges. Set to BUSINESS-PAYS by default |
-| mobile\_tarrif | options are **BUSINESS-PAYS** and **CUSTOMER-PAYS** . Determine pays the card charges. Set to BUSINESS-PAYS by default |
+| card\_tarrif | options are **BUSINESS-PAYS** and **CUSTOMER-PAYS** . Specify who pays the card charges. Set to BUSINESS-PAYS by default |
+| mobile\_tarrif | options are **BUSINESS-PAYS** and **CUSTOMER-PAYS** . Specify who pays the mobile charges. Set to BUSINESS-PAYS by default |
 

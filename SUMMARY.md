@@ -25,7 +25,7 @@
 * [Refunds](card-chargebacks.md)
 * [WebHooks](webhooks.md)
 * [REST API Plugins and SDKs](plugins-and-sdks/README.md)
-  * [IntaSend Python](plugins-and-sdks/python.md)
+  * [Python SDK](plugins-and-sdks/python.md)
   * [PHP SDK](plugins-and-sdks/php-sdk.md)
 * [Testing](sandbox-and-live-environments.md)
 * [Errors reference](errors.md)
