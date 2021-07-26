@@ -32,10 +32,15 @@ Sign up for the **sandbox environment** for your development and testing.
 | :--- | :--- | :--- |
 | 4000 0000 0000 0002 | Any future date | Any 3 digits |
 | 4242 4242 4242 4242 | Any future date | Any 3 digits |
-| 4000 0000 0000 0101 \(No auth\) | Any future date | Any 3 digits |
-| 4000 0027 6000 3184 \(Auth required\) | Any future date | Any 3 digits |
+| 4000 0000 0000 0101 | Any future date | Any 3 digits |
+| 4000 0027 6000 3184 | Any future date | Any 3 digits |
 | 5555 5555 5555 4444 | Any future date | Any 3 digits |
-| 3714 4963 5398 431 | Any future date | Any 4 digits |
+| 5200 8282 8282 8210 | Any future date | Any 4 digits |
+| 4000 0566 5566 5556 | Any future date | Any 3 digits |
+| 5200 8282 8282 8210 | Any future date | Any 3 digits |
+| 4000 0027 6000 3184 | Any future date | Any 3 digits |
+| 4456 5300 0000 1005 | Any future date | Any 3 digits |
+| 5200 0000 0000 3001 | Any future date | Any 3 digits |
 
 #### Test M-Pesa
 
