@@ -10,8 +10,12 @@ description: >-
 ### How to Generate API Token
 
 1. Log in with your account username and password. Ensure this request is made through HTTPS \(secure HTTP protocol\).
-2. For **sandbox** go to [https://sandbox.intasend.com/account/api-keys/](https://sandbox.intasend.com/account/api-keys/) and for **production** use [https://payment.intasend.com/account/api-keys/](https://payment.intasend.com/account/api-keys/)
+2. For **sandbox \(no sign-up is required\)** go to [https://sandbox.intasend.com/account/api-keys/](https://sandbox.intasend.com/account/api-keys/) and for **production** use [https://payment.intasend.com/account/api-keys/](https://payment.intasend.com/account/api-keys/)
 3. Click Generate API Token button to create your token. You must copy this token and store it in a safe place. This is what you'll be using for authentication.
+
+{% hint style="info" %}
+Get test API key here [https://sandbox.intasend.com/](https://sandbox.intasend.com/) \(No sign-up needed\).
+{% endhint %}
 
 ![](../.gitbook/assets/image%20%2811%29.png)
 
