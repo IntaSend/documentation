@@ -26,7 +26,11 @@ Note: For standard button integration, IntaSend uses the class name to `intaSend
 
 ## 3. Complete setup
 
-Complete setup by setting your publishable key and other options e.g redirect URL. Access your public API Key from your account under settings - API keys panel. IntaSend also provides a sandbox environment for [testing](../sandbox-and-live-environments.md)
+Complete setup by setting your publishable key and other options e.g redirect URL. Access your public API Key from your account under settings - API keys panel. IntaSend also provides a sandbox environment for [testing](../sandbox-and-live-environments.md) 
+
+{% hint style="info" %}
+Get test publishable key here [https://sandbox.intasend.com/](https://sandbox.intasend.com/) \(No sign-up needed\).
+{% endhint %}
 
 ```bash
 new window.IntaSend({
