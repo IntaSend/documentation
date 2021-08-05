@@ -1,5 +1,5 @@
 ---
-description: How to create check-out page using IntaSend 's check-out API
+description: How to create check-out page using IntaSend 's checkout API
 ---
 
 # Checkout API
