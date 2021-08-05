@@ -8,7 +8,7 @@
   * [Payment data parameters](online-payments/payment-data-parameters.md)
   * [Payment results](online-payments/payment-results.md)
   * [Using a custom button](online-payments/using-a-custom-button.md)
-  * [Express check-out](online-payments/express-checkout.md)
+  * [Checkout API](online-payments/express-checkout.md)
   * [Direct M-Pesa STK-Push](online-payments/collection-api.md)
   * [React/Vue/Yarn/NPM](online-payments/react-vue-javascript.md)
   * [WordPress](online-payments/wordpress.md)

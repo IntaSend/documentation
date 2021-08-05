@@ -2,9 +2,201 @@
 description: How to create check-out page using IntaSend 's check-out API
 ---
 
-# Express check-out
+# Checkout API
 
 To create a checkout page, simply send a post request to `/api/v1/checkout/` with the [payment data parameter](payment-data-parameters.md)s as payload.
+
+## Code examples
+
+Send **POST** request to generate a **checkout URL**, then redirect the user to the checkout link to securely complete payment.
+
+{% tabs %}
+{% tab title="Curl" %}
+```text
+curl --location --request POST 'https://sandbox.intasend.com/api/v1/checkout/' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: csrftoken=RJXYBwzJ3IeqxgrNZ0iRFblmo9dOO6Sr6PiCjkrwrmu5LUYDTuNJanEbVwWveodC' \
+--data-raw '{
+    "public_key": "<YOUR-PUBLISHABLE-API-KEY>",
+    "amount": 10,
+    "currency": "USD",
+    "email": "john@doe.com",
+    "first_name": "John",
+    "last_name": "Doe",
+    "country": "US"
+}'
+```
+{% endtab %}
+
+{% tab title="Go" %}
+    package main
+
+    import (
+      "fmt"
+      "strings"
+      "net/http"
+      "io/ioutil"
+    )
+
+    func main() {
+
+      url := "https://sandbox.intasend.com/api/v1/checkout/"
+      method := "POST"
+
+      payload := strings.NewReader(`{
+        "public_key": "<YOUR-PUBLISHABLE-API-KEY>",
+        "amount": 10,
+        "currency": "USD",
+        "email": "john@doe.com",
+        "first_name": "John",
+        "last_name": "Doe",
+        "country": "US"
+    }`)
+
+      client := &http.Client {
+      }
+      req, err := http.NewRequest(method, url, payload)
+
+      if err != nil {
+        fmt.Println(err)
+        return
+      }
+      req.Header.Add("Content-Type", "application/json")
+
+      res, err := client.Do(req)
+      if err != nil {
+        fmt.Println(err)
+        return
+      }
+      defer res.Body.Close()
+
+      body, err := ioutil.ReadAll(res.Body)
+      if err != nil {
+        fmt.Println(err)
+        return
+      }
+      fmt.Println(string(body))
+    }
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```
+var axios = require('axios');
+var data = JSON.stringify({"public_key":"<YOUR-PUBLISHABLE-API-KEY>","amount":10,"currency":"USD","email":"john@doe.com","first_name":"John","last_name":"Doe","country":"US"});
+
+var config = {
+  method: 'post',
+  url: 'https://sandbox.intasend.com/api/v1/checkout/',
+  headers: { 
+    'Content-Type': 'application/json'
+  },
+  data : data
+};
+
+axios(config)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+})
+.catch(function (error) {
+  console.log(error);
+});
+
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+```
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://sandbox.intasend.com/api/v1/checkout/',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS =>'{
+    "public_key": "<YOUR-PUBLISHABLE-API-KEY>",
+    "amount": 10,
+    "currency": "USD",
+    "email": "john@doe.com",
+    "first_name": "John",
+    "last_name": "Doe",
+    "country": "US"
+}',
+  CURLOPT_HTTPHEADER => array(
+    'Content-Type: application/json'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```
+import requests
+
+url = "https://sandbox.intasend.com/api/v1/checkout/"
+
+payload={
+  "public_key":"<YOUR-PUBLISHABLE-API-KEY>",
+  "amount": 10,
+  "currency": "USD",
+  "email": "john@doe.com",
+  "first_name": "John",
+  "last_name": "Doe",
+  "country": "US"
+}
+headers = {
+  'Content-Type': 'application/json'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+
+```
+{% endtab %}
+{% endtabs %}
+
+### Response
+
+The checkout request returns a JSON response with a **`url`** field. Redirect the user to the **`url`** to securely complete payment.
+
+```text
+{
+    "id": "666f4283-ffb2-4633-8c30-5338a50be37d",
+    "url": "https://sandbox.intasend.com/checkout/666f4283-ffb2-4633-8c30-5338a50be37d/express/",
+    "signature": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJl....",
+    "first_name": "John",
+    "last_name": "Doe",
+    "phone_number": null,
+    "email": "john@doe.com",
+    "country": "US",
+    "address": null,
+    "city": null,
+    "state": null,
+    "zipcode": null,
+    "api_ref": null,
+    "amount": "10.00",
+    "currency": "USD",
+    "mobile_tarrif": "BUSINESS-PAYS",
+    "card_tarrif": "BUSINESS-PAYS",
+    "created_at": "2021-08-05T10:53:08.761765+03:00",
+    "updated_at": "2021-08-05T10:53:08.761794+03:00"
+}
+```
+
+## Code Example using Axios \(JavaScript\)
 
 {% hint style="info" %}
 Here is a quick example of how to create a link using JavaScript. Note this can be done from any backend e.g PHP, Python, and Java
@@ -12,7 +204,7 @@ Here is a quick example of how to create a link using JavaScript. Note this can 
 
 ## 1. Install Axios
 
-We'll use axios to send HTTP post requests. Feel free to use any other tool that works well for you.
+We'll use Axios to send HTTP post requests. Feel free to use any other tool that works well for you.
 
 ```text
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
