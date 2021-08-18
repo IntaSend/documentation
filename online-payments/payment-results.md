@@ -57,3 +57,7 @@ Below is a sample result returned for your reference.
 }
 ```
 
+You may want to add extra validation on your backend before releasing the product/service. Please consider subscribing to webhooks for live events.
+
+{% page-ref page="../webhooks/payment-collection-events.md" %}
+
