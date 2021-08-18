@@ -24,7 +24,7 @@
   * [Wallets API](wallet-as-a-service/wallets-api.md)
 * [Refunds](card-chargebacks.md)
 * [WebHooks](webhooks/README.md)
-  * [How to setup](webhooks/how-to-setup.md)
+  * [How to set up a webhook](webhooks/how-to-setup.md)
   * [Payment collection events](webhooks/payment-collection-events.md)
   * [Send money events](webhooks/send-money-events.md)
   * [Chargeback events](webhooks/chargeback-events.md)

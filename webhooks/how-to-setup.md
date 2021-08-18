@@ -2,7 +2,7 @@
 description: How to setup your webhook destination URL.
 ---
 
-# How to setup
+# How to set up a webhook
 
 ## What are webhooks?
 
