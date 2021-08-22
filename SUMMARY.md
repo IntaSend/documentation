@@ -12,6 +12,7 @@
   * [Direct M-Pesa STK-Push](online-payments/collection-api.md)
   * [React/Vue/Yarn/NPM](online-payments/react-vue-javascript/README.md)
     * [Vue Example](online-payments/react-vue-javascript/vue-example.md)
+    * [React JS Example](online-payments/react-vue-javascript/react-js-example.md)
   * [WordPress](online-payments/wordpress.md)
   * [WooCommerce](online-payments/woocommerce.md)
   * [Flutter \(Mobile\)](online-payments/flutter-mobile.md)
