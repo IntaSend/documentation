@@ -2,7 +2,7 @@
 description: How to integrate IntaSend payment in your JavaScript web framework.
 ---
 
-# React/Vue/Yarn/NPM
+# React and Vue Examples
 
 ## 1. Install SDK
 

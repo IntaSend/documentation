@@ -10,7 +10,7 @@
   * [Using a custom button](online-payments/using-a-custom-button.md)
   * [Checkout API](online-payments/express-checkout.md)
   * [Direct M-Pesa STK-Push](online-payments/collection-api.md)
-  * [React/Vue/Yarn/NPM](online-payments/react-vue-javascript/README.md)
+  * [React and Vue Examples](online-payments/react-vue-javascript/README.md)
     * [Vue Example](online-payments/react-vue-javascript/vue-example.md)
     * [React JS Example](online-payments/react-vue-javascript/react-js-example.md)
   * [WordPress](online-payments/wordpress.md)
