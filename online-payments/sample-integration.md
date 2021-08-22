@@ -4,7 +4,7 @@ description: >-
   works
 ---
 
-# Sample integration
+# Code Examples
 
 IntaSend integration tools provide developers with various options so as to create a robust payment experience.
 
