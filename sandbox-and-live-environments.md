@@ -18,7 +18,7 @@ Get started with our developers environment - so sign-up is required. Start expe
 
 Sign up for the **sandbox environment** for your development and testing.
 
-**Sign up URL:** [https://sandbox.intasend.com/account/signup/](https://sandbox.intasend.com/account/signup/) ``
+**Sign up URL:** [https://sandbox.intasend.com/](https://sandbox.intasend.com) ``
 
 **API base URL:** [https://sandbox.intasend.com/api/](https://sandbox.intasend.com/api/)
 
