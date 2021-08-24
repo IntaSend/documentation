@@ -11,7 +11,7 @@ IntaSend provides both staging and live environments.
 All requests and callback URLs to this environment must be made through a secure network protocol \(HTTPS\). 
 
 {% hint style="info" %}
-Get started with our developers environment - so sign-up is required. Start experimenting right away - [https://sandbox.intasend.com/](https://sandbox.intasend.com/)
+Get started with our developer environment - so sign-up is required. Start experimenting right away - [https://sandbox.intasend.com/](https://sandbox.intasend.com/)
 {% endhint %}
 
 ### Sandbox / Development Environment
