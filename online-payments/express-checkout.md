@@ -12,7 +12,7 @@ Send **POST** request to generate a **checkout URL**, then redirect the user to 
 
 {% tabs %}
 {% tab title="Curl" %}
-```text
+```
 curl --location --request POST 'https://sandbox.intasend.com/api/v1/checkout/' \
 --header 'Content-Type: application/json' \
 --header 'Cookie: csrftoken=RJXYBwzJ3IeqxgrNZ0iRFblmo9dOO6Sr6PiCjkrwrmu5LUYDTuNJanEbVwWveodC' \
@@ -29,54 +29,56 @@ curl --location --request POST 'https://sandbox.intasend.com/api/v1/checkout/' \
 {% endtab %}
 
 {% tab title="Go" %}
-    package main
+```
+package main
 
-    import (
-      "fmt"
-      "strings"
-      "net/http"
-      "io/ioutil"
-    )
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
 
-    func main() {
+func main() {
 
-      url := "https://sandbox.intasend.com/api/v1/checkout/"
-      method := "POST"
+  url := "https://sandbox.intasend.com/api/v1/checkout/"
+  method := "POST"
 
-      payload := strings.NewReader(`{
-        "public_key": "<YOUR-PUBLISHABLE-API-KEY>",
-        "amount": 10,
-        "currency": "USD",
-        "email": "john@doe.com",
-        "first_name": "John",
-        "last_name": "Doe",
-        "country": "US"
-    }`)
+  payload := strings.NewReader(`{
+    "public_key": "<YOUR-PUBLISHABLE-API-KEY>",
+    "amount": 10,
+    "currency": "USD",
+    "email": "john@doe.com",
+    "first_name": "John",
+    "last_name": "Doe",
+    "country": "US"
+}`)
 
-      client := &http.Client {
-      }
-      req, err := http.NewRequest(method, url, payload)
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, payload)
 
-      if err != nil {
-        fmt.Println(err)
-        return
-      }
-      req.Header.Add("Content-Type", "application/json")
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  req.Header.Add("Content-Type", "application/json")
 
-      res, err := client.Do(req)
-      if err != nil {
-        fmt.Println(err)
-        return
-      }
-      defer res.Body.Close()
+  res, err := client.Do(req)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer res.Body.Close()
 
-      body, err := ioutil.ReadAll(res.Body)
-      if err != nil {
-        fmt.Println(err)
-        return
-      }
-      fmt.Println(string(body))
-    }
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(string(body))
+}
+```
 {% endtab %}
 
 {% tab title="JavaScript" %}
@@ -172,7 +174,7 @@ print(response.text)
 
 The checkout request returns a JSON response with a **`url`** field. Redirect the user to the **`url`** to securely complete payment.
 
-```text
+```
 {
     "id": "666f4283-ffb2-4633-8c30-5338a50be37d",
     "url": "https://sandbox.intasend.com/checkout/666f4283-ffb2-4633-8c30-5338a50be37d/express/",
@@ -196,7 +198,7 @@ The checkout request returns a JSON response with a **`url`** field. Redirect th
 }
 ```
 
-## Code Example using Axios \(JavaScript\)
+## Code Example using Axios (JavaScript)
 
 {% hint style="info" %}
 Here is a quick example of how to create a link using JavaScript. Note this can be done from any backend e.g PHP, Python, and Java
@@ -206,7 +208,7 @@ Here is a quick example of how to create a link using JavaScript. Note this can 
 
 We'll use Axios to send HTTP post requests. Feel free to use any other tool that works well for you.
 
-```text
+```
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 ```
 
@@ -216,7 +218,7 @@ Send a POST request to the API environment that you'd wish to create the link. L
 
 A successful request will return an `url` which in this case will be our check-out URL. Share this `url` with the customer for them to complete payment.
 
-```text
+```
 function generateLink() {
     // Use https://payment.intasend.com/api/v1/checkout/ for live payments
     let url = "https://sandbox.intasend.com/api/v1/checkout/"
@@ -239,7 +241,6 @@ function generateLink() {
 
 Trigger the above function using on-click event. Here is a sample button for your reference.
 
-```text
+```
 <button onclick="generateLink()">Pay now</button>
 ```
-

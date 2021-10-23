@@ -8,58 +8,44 @@ description: >-
 
 Use the collection API if you prefer to automatically trigger M-Pesa STK payment requests from your backend using Python, Java,  PHP,  and Go.
 
-{% api-method method="post" host="https://sandbox.intasend.com" path="/api/v1/payment/collection/" %}
-{% api-method-summary %}
-Send M-Pesa STK-Push request
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://sandbox.intasend.com" path="/api/v1/payment/collection/" method="post" summary="Send M-Pesa STK-Push request" %}
+{% swagger-description %}
 Send an M-Pesa STK push payment request
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="public\_key" type="string" required=true %}
+{% swagger-parameter in="body" name="public_key" type="string" %}
 Your account public key. Found under settings.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="currency" type="string" required=true %}
+{% swagger-parameter in="body" name="currency" type="string" %}
 KES 
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="method" type="string" required=true %}
+{% swagger-parameter in="body" name="method" type="string" %}
 M-PESA
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="amount" type="number" required=true %}
+{% swagger-parameter in="body" name="amount" type="number" %}
 Billing amount 
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="api\_ref" type="string" required=false %}
+{% swagger-parameter in="body" name="api_ref" type="string" %}
 Your transaction reference/tracking code
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="name" type="string" required=false %}
+{% swagger-parameter in="body" name="name" type="string" %}
 Customer name
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="phone\_number" type="string" required=true %}
+{% swagger-parameter in="body" name="phone_number" type="string" %}
 Prefix with country code e.g 2547..
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="email" type="string" required=false %}
+{% swagger-parameter in="body" name="email" type="string" %}
 Customer email
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```
 {
     "invoice": {
@@ -76,41 +62,25 @@ Customer email
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 
 
-{% api-method method="post" host="https://sandbox.intasend.com" path="/api/v1/payment/status/" %}
-{% api-method-summary %}
+{% swagger baseUrl="https://sandbox.intasend.com" path="/api/v1/payment/status/" method="post" summary="Check payment status" %}
+{% swagger-description %}
 Check payment status
-{% endapi-method-summary %}
+{% endswagger-description %}
 
-{% api-method-description %}
-Check payment status
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="public\_key" type="string" required=true %}
+{% swagger-parameter in="body" name="public_key" type="string" %}
 Account public key. Found under settings 
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="invoice\_id" type="string" required=true %}
+{% swagger-parameter in="body" name="invoice_id" type="string" %}
 Invoice ID returned in the payment request
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Sample response returned
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Sample response returned" %}
 ```
 {
     "invoice": {
@@ -152,8 +122,5 @@ Sample response returned
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
+{% endswagger-response %}
+{% endswagger %}

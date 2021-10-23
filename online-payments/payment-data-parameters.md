@@ -8,22 +8,21 @@ The following options can be parsed to the payment button during integration usi
 
 This schema is also useful for [custom button integration](using-a-custom-button.md).
 
-| Parameter | Description |
-| :--- | :--- |
-| currency | Recommended: Options are USD, KES, GBP, EUR |
-| amount | Optional. If not defined customers will have the option to specify how much they want to pay |
-| phone\_number | Optional. Customers will be prompted if required e.g M-Pesa payment |
-| email | Optional. Customers will be prompted if required e.g card payments |
-| api\_ref | Recommended - Tracking reference for own use.  |
-| comment | Optional customer comment if any |
-| first\_name | Optional customer first name |
-| last\_name | Optional customer last name |
-| country | Optional country code e.g US, BR, KE, etc |
-| address | Optional user billing address |
-| city | Optional user billing city |
-| state | Optional user billing state |
-| zipcode | Optional user billing zipcode |
-| method | Optional - if specified only the method will be used. Options are M-PESA, CARD-PAYMENT. Leave blank to show all payment methods. |
-| card\_tarrif | options are **BUSINESS-PAYS** and **CUSTOMER-PAYS** . Specify who pays the card charges. Set to BUSINESS-PAYS by default |
-| mobile\_tarrif | options are **BUSINESS-PAYS** and **CUSTOMER-PAYS** . Specify who pays the mobile charges. Set to BUSINESS-PAYS by default |
-
+| Parameter      | Description                                                                                                                      |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| currency       | Recommended: Options are USD, KES, GBP, EUR                                                                                      |
+| amount         | Optional. If not defined customers will have the option to specify how much they want to pay                                     |
+| phone\_number  | Optional. Customers will be prompted if required e.g M-Pesa payment                                                              |
+| email          | Optional. Customers will be prompted if required e.g card payments                                                               |
+| api\_ref       | Recommended - Tracking reference for own use.                                                                                    |
+| comment        | Optional customer comment if any                                                                                                 |
+| first\_name    | Optional customer first name                                                                                                     |
+| last\_name     | Optional customer last name                                                                                                      |
+| country        | Optional country code e.g US, BR, KE, etc                                                                                        |
+| address        | Optional user billing address                                                                                                    |
+| city           | Optional user billing city                                                                                                       |
+| state          | Optional user billing state                                                                                                      |
+| zipcode        | Optional user billing zipcode                                                                                                    |
+| method         | Optional - if specified only the method will be used. Options are M-PESA, CARD-PAYMENT. Leave blank to show all payment methods. |
+| card\_tarrif   | options are **BUSINESS-PAYS** and **CUSTOMER-PAYS** . Specify who pays the card charges. Set to BUSINESS-PAYS by default         |
+| mobile\_tarrif | options are **BUSINESS-PAYS** and **CUSTOMER-PAYS** . Specify who pays the mobile charges. Set to BUSINESS-PAYS by default       |

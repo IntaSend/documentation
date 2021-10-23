@@ -12,15 +12,22 @@ IntaSend enables businesses to receive and disburse payments. Supported channels
 
 We provide various tools for payment collection including payment links that you can instantly use without the need of hosting your own website and/or mobile application. Below are useful links that can help you get started with online payments collection.
 
-{% page-ref page="online-payments/how-to-collect-funds.md" %}
+{% content-ref url="online-payments/how-to-collect-funds.md" %}
+[how-to-collect-funds.md](online-payments/how-to-collect-funds.md)
+{% endcontent-ref %}
 
-{% page-ref page="online-payments/sample-integration.md" %}
+{% content-ref url="online-payments/sample-integration.md" %}
+[sample-integration.md](online-payments/sample-integration.md)
+{% endcontent-ref %}
 
-{% page-ref page="online-payments/express-checkout.md" %}
+{% content-ref url="online-payments/express-checkout.md" %}
+[express-checkout.md](online-payments/express-checkout.md)
+{% endcontent-ref %}
 
 ### How to get started with sending money service
 
 Use our transfer API to safely send mobile money and IntaSend and P2P transfers. The API is REST-based and requires authentication. Here are quick links to help you get started.
 
-{% page-ref page="send-payments/" %}
-
+{% content-ref url="send-payments/" %}
+[send-payments](send-payments/)
+{% endcontent-ref %}

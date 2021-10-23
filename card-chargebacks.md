@@ -10,48 +10,32 @@ Before using this resource, please read carefully our article on how we handle [
 
 These endpoints require [authentication](send-payments/api-authentication.md#obtain-authentication-token).
 
-{% api-method method="post" host="https://sandbox.intasend.com" path="/api/v1/chargebacks/" %}
-{% api-method-summary %}
-Create Chargeback
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://sandbox.intasend.com" path="/api/v1/chargebacks/" method="post" summary="Create Chargeback" %}
+{% swagger-description %}
 Create a new chargeback request. IntaSend will be notified for processing.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
-Bearer &lt;Token&gt;
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% swagger-parameter in="header" name="Authentication" type="string" %}
+Bearer <Token>
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="invoice" type="number" required=true %}
-Invoice id of the transaction. This ID is normally returned in the complete card transaction as tracking\_id or invoice\_id
-{% endapi-method-parameter %}
+{% swagger-parameter in="body" name="invoice" type="number" %}
+Invoice id of the transaction. This ID is normally returned in the complete card transaction as tracking_id or invoice_id
+{% endswagger-parameter %}
 
-{% api-method-parameter name="amount" type="string" required=true %}
+{% swagger-parameter in="body" name="amount" type="string" %}
 Amount to be refunded. Must be equal or less than the billed amount
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="reason" type="string" required=true %}
+{% swagger-parameter in="body" name="reason" type="string" %}
 Reason for refund
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="reason\_details" type="string" required=false %}
+{% swagger-parameter in="body" name="reason_details" type="string" %}
 More details on the reason provided
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-A new chargeback entry details are returned
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="A new chargeback entry details are returned" %}
 ```
 {
     "id": 1,
@@ -64,35 +48,19 @@ A new chargeback entry details are returned
     "staff_created": "false"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://sandbox.intasend.com" path="/api/v1/chargebacks/" %}
-{% api-method-summary %}
-List Chargeback
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://sandbox.intasend.com" path="/api/v1/chargebacks/" method="get" summary="List Chargeback" %}
+{% swagger-description %}
 List chargebacks made to the account
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
-Bearer &lt;Token&gt;
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% swagger-parameter in="header" name="Authentication" type="string" %}
+Bearer <Token>
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Returns array of results
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Returns array of results" %}
 ```
 [{
     "id": 1,
@@ -106,41 +74,23 @@ Returns array of results
     "staff_created": "false"
 }]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://sandbox.intasend.com" path="/api/v1/chargebacks/:chargeback\_id/" %}
-{% api-method-summary %}
-Retrieve Chargeback
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://sandbox.intasend.com" path="/api/v1/chargebacks/:chargeback_id/" method="get" summary="Retrieve Chargeback" %}
+{% swagger-description %}
 Retrieve single chargeback record
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="chargeback\_id" type="integer" required=true %}
+{% swagger-parameter in="path" name="chargeback_id" type="integer" %}
 Record id to retrieve
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=false %}
-Bearer &lt;Token&gt;
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% swagger-parameter in="header" name="Authentication" type="string" %}
+Bearer <Token>
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Chargeback record
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Chargeback record" %}
 ```
 {
     "id": 1,
@@ -154,8 +104,5 @@ Chargeback record
     "staff_created": "false"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
+{% endswagger-response %}
+{% endswagger %}

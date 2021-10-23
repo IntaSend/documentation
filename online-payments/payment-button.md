@@ -11,7 +11,7 @@ description: >-
 Add the latest IntaSend web plugin before closing your `</head>` tag
 
 ```
-<script src="https://unpkg.com/intasend-inlinejs-sdk@3.0.2/build/intasend-inline.js"></script>
+<script src="https://unpkg.com/intasend-inlinejs-sdk@3.0.4/build/intasend-inline.js"></script>
 ```
 
 ## 2. Add the payment button
@@ -26,10 +26,10 @@ Note: For standard button integration, IntaSend uses the class name to `intaSend
 
 ## 3. Complete setup
 
-Complete setup by setting your publishable key and other options e.g redirect URL. Access your public API Key from your account under settings - API keys panel. IntaSend also provides a sandbox environment for [testing](../sandbox-and-live-environments.md) 
+Complete setup by setting your publishable key and other options e.g redirect URL. Access your public API Key from your account under settings - API keys panel. IntaSend also provides a sandbox environment for [testing](../sandbox-and-live-environments.md)&#x20;
 
 {% hint style="info" %}
-Get test publishable key here [https://sandbox.intasend.com/](https://sandbox.intasend.com/) \(No sign-up needed\).
+Get test publishable key here [https://sandbox.intasend.com/](https://sandbox.intasend.com) (No sign-up needed).
 {% endhint %}
 
 ```bash
@@ -46,7 +46,10 @@ IntaSend uses events to communicate the status of the transaction. Events will b
 
 Now that you have payment configured, you might want to capture payment results and customize the button for a better payment experience. Below are useful resources for your reference.
 
-{% page-ref page="payment-results.md" %}
+{% content-ref url="payment-results.md" %}
+[payment-results.md](payment-results.md)
+{% endcontent-ref %}
 
-{% page-ref page="using-a-custom-button.md" %}
-
+{% content-ref url="using-a-custom-button.md" %}
+[using-a-custom-button.md](using-a-custom-button.md)
+{% endcontent-ref %}

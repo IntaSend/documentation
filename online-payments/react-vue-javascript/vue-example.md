@@ -8,5 +8,3 @@ Vue implementation using the NPM plugin. Replace the PUBLIC\_KEY value with your
 
 {% embed url="https://codepen.io/felixcheruiyot/pen/gORYXmY" %}
 
-
-

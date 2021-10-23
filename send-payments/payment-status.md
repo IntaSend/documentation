@@ -4,36 +4,20 @@ description: How to obtain send money payment status.
 
 # Send Money Status
 
-{% api-method method="post" host="https://sandbox.intasend.com" path="/api/v1/send-money/status/" %}
-{% api-method-summary %}
-Get send money status
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://sandbox.intasend.com" path="/api/v1/send-money/status/" method="post" summary="Get send money status" %}
+{% swagger-description %}
 This endpoint allows you to check payment status.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
-Bearer &lt;TOKEN&gt;
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% swagger-parameter in="header" name="Authentication" type="string" %}
+Bearer <TOKEN>
+{% endswagger-parameter %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="tracking\_id" type="string" required=true %}
-Transaction tracking\_id returned from send money request
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter in="query" name="tracking_id" type="string" %}
+Transaction tracking_id returned from send money request
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Payment status
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Payment status" %}
 ```
 {
     "tracking_id": "6138a6b7-51f6-42e2-86d0-8ca31c286dd8",
@@ -65,10 +49,8 @@ Payment status
     "updated_at": "2020-06-26T17:37:17.933968+03:00"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 #### Code examples
 
@@ -180,6 +162,4 @@ puts response.read_body
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

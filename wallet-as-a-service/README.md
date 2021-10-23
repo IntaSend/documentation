@@ -18,9 +18,11 @@ There are so many other use-cases that our API can support. Please feel free to 
 
 Follow the guides below to get started with our REST API.
 
-{% page-ref page="wallets-api.md" %}
+{% content-ref url="wallets-api.md" %}
+[wallets-api.md](wallets-api.md)
+{% endcontent-ref %}
 
-{% page-ref page="../plugins-and-sdks/" %}
-
-
+{% content-ref url="../plugins-and-sdks/" %}
+[plugins-and-sdks](../plugins-and-sdks/)
+{% endcontent-ref %}
 

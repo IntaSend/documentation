@@ -8,9 +8,11 @@ description: >-
 
 IntaSend has built a secure payment gateway to power e-commerce sites. IntaSend is platform is secure and PCI-DSS compliant. We have built tools to make integration easier for businesses and developers.
 
-Ready to add payments to your site? Below is a step-by-step video and guide on how to integrate payment on WooCommerce. Feel free to also test our demo site here [http://54.86.135.148/](http://54.86.135.148/).
+Ready to add payments to your site? Below is a step-by-step video and guide on how to integrate payment on WooCommerce. Feel free to also test our demo site here [http://54.86.135.148/](http://54.86.135.148).
 
-{% embed url="https://www.loom.com/share/644db0fac41541008c5b7c3e4dffb6d4" caption="How to setup and install IntaSend Plugin for WooCommerce" %}
+{% embed url="https://www.loom.com/share/644db0fac41541008c5b7c3e4dffb6d4" %}
+How to setup and install IntaSend Plugin for WooCommerce
+{% endembed %}
 
 ## 1. Download the latest IntaSend WooCommerce Plugin
 
@@ -32,7 +34,7 @@ After the activate action, your plugin will be listed under the plugins section.
 
 ## 4. Complete Payments setting in WooCommerce
 
-After activation, the plugin will be automatically be added to your **WooCommerce Settings tab** under the **Payments section**. Please check the screenshot below.
+After activation, the plugin will be automatically be added to your **WooCommerce Settings tab** under the** Payments section**. Please check the screenshot below.
 
 ![](../.gitbook/assets/step-4.png)
 
@@ -44,7 +46,7 @@ Obtain your Publishable API key from the IntaSend dashboard.
 
 For testing go to [https://sandbox.intasend.com/account/api-keys/](https://sandbox.intasend.com/account/api-keys/)
 
-For live \(production\) publishable key [https://payment.intasend.com/account/api-keys/](https://payment.intasend.com/account/api-keys/)
+For live (production) publishable key [https://payment.intasend.com/account/api-keys/](https://payment.intasend.com/account/api-keys/)
 
 ![](../.gitbook/assets/get-publishable-key.png)
 
@@ -61,4 +63,3 @@ To test your integration, add items to your cart and proceed to checkout. You sh
 ![](../.gitbook/assets/checkout-screen.png)
 
 Congratulations, your WooCommerce site is now well set up to start receiving payments.
-

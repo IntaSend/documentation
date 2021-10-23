@@ -15,7 +15,7 @@ new window.IntaSend({
 .on("FAILED", (failed_results) => console.log(failed_results))
 ```
 
-Below is a sample result returned for your reference. 
+Below is a sample result returned for your reference.&#x20;
 
 ```javascript
 {
@@ -59,5 +59,6 @@ Below is a sample result returned for your reference.
 
 You may want to add extra validation on your backend before releasing the product/service. Please consider subscribing to webhooks for live events.
 
-{% page-ref page="../webhooks/payment-collection-events.md" %}
-
+{% content-ref url="../webhooks/payment-collection-events.md" %}
+[payment-collection-events.md](../webhooks/payment-collection-events.md)
+{% endcontent-ref %}

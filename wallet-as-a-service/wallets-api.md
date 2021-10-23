@@ -6,30 +6,16 @@ description: API end-points for working with wallets and sub-accounts
 
 These APIs will help you to create and manage **WORKING** wallets. By default, all IntaSend accounts have **SETTLEMENT** accounts which act as main accounts. **WORKING** wallets are basically sub-accounts that you can use to isolate your customers'/merchants' funds. Each customer can have their own wallets within IntaSend that you will manage on their behalf.
 
-{% api-method method="get" host="https://sandbox.intasend.com" path="/api/v1/wallets/" %}
-{% api-method-summary %}
-List available wallets
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://sandbox.intasend.com" path="/api/v1/wallets/" method="get" summary="List available wallets" %}
+{% swagger-description %}
 Get a list of available wallets in the account. 
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Bearer &lt;ACCESS-TOKEN&gt;
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Bearer <ACCESS-TOKEN>
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Sample successful response
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Sample successful response" %}
 ```
 [{
     'id': 9,
@@ -47,35 +33,19 @@ Sample successful response
     'updated_at': '2021-05-31T21:51:05.577470+03:00'
 }]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://sandbox.intasend.com" path="/api/v1/wallets/:id/" %}
-{% api-method-summary %}
-Get wallet details
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://sandbox.intasend.com" path="/api/v1/wallets/:id/" method="get" summary="Get wallet details" %}
+{% swagger-description %}
 Get wallet detailed information such as balance using its ID
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Bearer &lt;ACCESS-TOKEN&gt;
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Bearer <ACCESS-TOKEN>
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Sample successful response.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Sample successful response." %}
 ```
 {
     'id': 201,
@@ -86,45 +56,27 @@ Sample successful response.
     'updated_at': '2021-05-23T09:25:50.665390+03:00'
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="post" host="​ https://sandbox.intasend.com" path="/api/v1/wallets/" %}
-{% api-method-summary %}
-Create a wallet
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="​ https://sandbox.intasend.com" path="/api/v1/wallets/" method="post" summary="Create a wallet" %}
+{% swagger-description %}
 Create a new wallet/sub-account
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Bearer &lt;ACCESS-TOKEN&gt;
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Bearer <ACCESS-TOKEN>
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="wallet\_type" type="string" required=true %}
+{% swagger-parameter in="body" name="wallet_type" type="string" %}
 Available option: WORKING
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="currency" type="string" required=true %}
+{% swagger-parameter in="body" name="currency" type="string" %}
 Available Options: KES, USD, GBP, EUR
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Sample successful response
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Sample successful response" %}
 ```
 {
     'id': 328,
@@ -135,73 +87,59 @@ Sample successful response
     'updated_at': '2021-05-31T21:51:05.577470+03:00'
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="post" host="https://sandbox.intasend.com" path="/api/v1/payment/collection/" %}
-{% api-method-summary %}
-Fund Wallet \(M-Pesa\)
-{% endapi-method-summary %}
+{% swagger baseUrl="https://sandbox.intasend.com" path="/api/v1/payment/collection/" method="post" summary="Fund Wallet (M-Pesa)" %}
+{% swagger-description %}
+Fund wallet directly with M-Pesa STK Push (collections API).  Note that this API request is similar to the collection API. The only difference is that here you have to specify the destination 
 
-{% api-method-description %}
-Fund wallet directly with M-Pesa STK Push \(collections API\).  Note that this API request is similar to the collection API. The only difference is that here you have to specify the destination `wallet_id`.
-{% endapi-method-description %}
+`wallet_id`
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Bearer &lt;ACCESS-TOKEN&gt;
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+.
+{% endswagger-description %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="public\_key" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Bearer <ACCESS-TOKEN>
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="public_key" type="string" %}
 Your public key
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="method" type="string" required=true %}
+{% swagger-parameter in="body" name="method" type="string" %}
 Available option: M-PESA
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="currency" type="string" required=true %}
+{% swagger-parameter in="body" name="currency" type="string" %}
 Available option: KES
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="amount" type="number" required=true %}
+{% swagger-parameter in="body" name="amount" type="number" %}
 Amount to pay
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="phone\_number" type="string" required=true %}
+{% swagger-parameter in="body" name="phone_number" type="string" %}
 Start with country prefix e.g 2547xxx
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="email" type="string" required=false %}
+{% swagger-parameter in="body" name="email" type="string" %}
 
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="name" type="string" required=false %}
+{% swagger-parameter in="body" name="name" type="string" %}
 
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="api\_ref" type="string" required=false %}
+{% swagger-parameter in="body" name="api_ref" type="string" %}
 For own application tracking purposes
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="wallet\_id" type="integer" required=true %}
+{% swagger-parameter in="body" name="wallet_id" type="integer" %}
 Destination wallet id
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Sample payload on successful request.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Sample payload on successful request." %}
 ```
 {
     'id': '77750cb8-ad67-46f7-b687-ce09831785bc',
@@ -245,49 +183,31 @@ Sample payload on successful request.
     'updated_at': '2021-05-31T22:15:34.619359+03:00'
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="post" host="https://sandbox.intasend.com" path="/api/v1/wallets/<:source\_id>/intra\_transfer/" %}
-{% api-method-summary %}
-Intra-Wallet Transfers
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://sandbox.intasend.com" path="/api/v1/wallets/<:source_id>/intra_transfer/" method="post" summary="Intra-Wallet Transfers" %}
+{% swagger-description %}
 Move money between wallets/sub-accounts you own. This request can be used for reconciliation purposes across different sub-accounts. For instance, implementing a charge on a working wallet tied to a supplier or a branch, move it to your settlement account, and maintain a detailed narrative as shown above. 
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Bearer &lt;ACCESS-TOKEN&gt;
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Bearer <ACCESS-TOKEN>
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="narrative" type="string" required=false %}
+{% swagger-parameter in="body" name="narrative" type="string" %}
 Reason for transfer
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="wallet\_id" type="integer" required=true %}
+{% swagger-parameter in="body" name="wallet_id" type="integer" %}
 Destination wallet id
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="amount" type="number" required=true %}
+{% swagger-parameter in="body" name="amount" type="number" %}
 Amount to transfer
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Sample successful request payload.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Sample successful request payload." %}
 ```
 {
     'origin': {
@@ -308,8 +228,5 @@ Sample successful request payload.
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
+{% endswagger-response %}
+{% endswagger %}

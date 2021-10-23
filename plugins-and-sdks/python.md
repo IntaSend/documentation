@@ -6,7 +6,7 @@ description: Official Python SDK
 
 ## How to install
 
-```text
+```
 pip install intasend-python
 ```
 
@@ -14,7 +14,7 @@ pip install intasend-python
 
 Obtain your [API token and Publishable key](../send-payments/api-authentication.md#how-to-generate-api-token) from your account i.e under Settings - API Keys panel.
 
-```text
+```
 from intasend import APIService
 
 private_key = """-----BEGIN PRIVATE KEY-----
@@ -30,7 +30,7 @@ service = APIService(token="token",publishable_key=publishable_key, private_key=
 
 Use the following helper function to generate a RSA Key for nonce signing. Keep your private\_key safe and share the public key with IntaSend. Note: These key pair is required only if you are sending money.
 
-```text
+```
 from intasend.utils import generate_keys
 
 private_key, public_key = generate_keys()
@@ -42,7 +42,7 @@ print(public_key)
 
 Below are few usage examples for your reference.
 
-```text
+```
 service = APIService(token="token",publishable_key=publishable_key, private_key=private_key, test=True)
 
 # Trigger M-Pesa STK Push
@@ -93,4 +93,3 @@ print(f"Status: {status}")
 title = "Link title/name"
 response = service.payment_links.create(title=title, currency="KES", amount=10)
 ```
-

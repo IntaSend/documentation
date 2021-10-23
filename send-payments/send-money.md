@@ -6,52 +6,40 @@ description: >-
 
 # Send Money
 
-{% api-method method="post" host="https://sandbox.intasend.com" path="/api/v1/send-money/initiate/" %}
-{% api-method-summary %}
-Step 1 - Initiate send money
-{% endapi-method-summary %}
+{% swagger baseUrl="https://sandbox.intasend.com" path="/api/v1/send-money/initiate/" method="post" summary="Step 1 - Initiate send money" %}
+{% swagger-description %}
+This endpoint allows you to initiate send money requests. This method only initiates the send money process. You'll need to approve the transaction using your 
 
-{% api-method-description %}
-This endpoint allows you to initiate send money requests. This method only initiates the send money process. You'll need to approve the transaction using your **approval private key**. 
-{% endapi-method-description %}
+**approval private key**
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
-Bearer &lt;TOKEN&gt; 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+. 
+{% endswagger-description %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="device\_id" type="number" required=true %}
+{% swagger-parameter in="header" name="Authentication" type="string" %}
+Bearer <TOKEN> 
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="device_id" type="number" %}
 Create device under API section on the dashboard, add a public key, and obtain its id.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="provider" type="string" required=true %}
+{% swagger-parameter in="body" name="provider" type="string" %}
 Options are: MPESA-B2C, INTASEND
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="callback\_url" type="string" required=false %}
+{% swagger-parameter in="body" name="callback_url" type="string" %}
 URL to send payment notification
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="transactions" type="array" required=true %}
+{% swagger-parameter in="body" name="transactions" type="array" %}
 List of transactions
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="currency" type="string" required=true %}
+{% swagger-parameter in="body" name="currency" type="string" %}
 KES
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Payment successfully received
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Payment successfully received" %}
 ```
 {
     "tracking_id": "c1acf08c-5cc1-4b3e-b4a8-e43bc068aa56",
@@ -82,18 +70,16 @@ Payment successfully received
     "updated_at": "2020-07-31T14:00:56.632188+03:00"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 Transaction list items
 
-| Parameter | Type | Required | Description |
-| :--- | :--- | :--- | :--- |
-| name | string | Yes | Beneficiary name |
-| account | integer | Yes | Beneficiary phone number. Must be in the format `2547xxxxxxxxx` - note the country prefix `254` without a `+` |
-| amount | integer | Yes | Amount to send |
+| Parameter | Type    | Required | Description                                                                                                   |
+| --------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------- |
+| name      | string  | Yes      | Beneficiary name                                                                                              |
+| account   | integer | Yes      | Beneficiary phone number. Must be in the format `2547xxxxxxxxx` - note the country prefix `254` without a `+` |
+| amount    | integer | Yes      | Amount to send                                                                                                |
 
 NB - Obtain tracking\_id for the purpose of [checking status](payment-status.md).
 
@@ -226,7 +212,7 @@ Response response = client.newCall(request).execute();
 
 {% tabs %}
 {% tab title="Successful request" %}
-```text
+```
 {
     "tracking_id": "c1acf08c-5cc1-4b3e-b4a8-e43bc068aa56",
     "status": "Preview and approve",
@@ -269,51 +255,32 @@ Sample response:
 {% endtab %}
 {% endtabs %}
 
-{% api-method method="post" host="https://sandbox.intasend.com" path="/api/v1/send-money/approve/" %}
-{% api-method-summary %}
-Step 2 - Approve send money
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://sandbox.intasend.com" path="/api/v1/send-money/approve/" method="post" summary="Step 2 - Approve send money" %}
+{% swagger-description %}
 Every transaction must be approved using the approval secret key. Only after approval, the transaction will be processed. Learn more about how to sign and approve a transaction using a digital key please check Extra Authentication - https://developers.intasend.com/apis/extra-payment-authentication.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Bearer &lt;TOKEN&gt;
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Bearer <TOKEN>
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="payload" type="string" required=true %}
+{% swagger-parameter in="body" name="payload" type="string" %}
 Send back the response returned in step 1 by signing and  replacing the nonce
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```
-
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-The original i.e returned response in step 1 \(initiation step\) looks like in the code block below. Pay attention to the `nonce` token which is a unique generated id for this transaction. You are required to sign this token and attach it back to the payload. Send back the payload with the signed nonce to the approval API. 
+The original i.e returned response in step 1 (initiation step) looks like in the code block below. Pay attention to the `nonce` token which is a unique generated id for this transaction. You are required to sign this token and attach it back to the payload. Send back the payload with the signed nonce to the approval API.&#x20;
 
 Note: You are required to sign the nonce with the **Private Key** of the device used to initiate the payment. Note this is under the device\_id parameter. On the IntaSend side, we'll verify the signature with the **Public Key** uploaded for use on the device.
 
-Here are more details on [how to sign the nonce](extra-payment-authentication.md). 
+Here are more details on [how to sign the nonce](extra-payment-authentication.md).&#x20;
 
-```text
+```
 {
     "tracking_id": "c1acf08c-5cc1-4b3e-b4a8-e43bc068aa56",
     "status": "Preview and approve",
@@ -338,7 +305,7 @@ Here are more details on [how to sign the nonce](extra-payment-authentication.md
 
 Sample signed payload
 
-```text
+```
 {
     "tracking_id": "c1acf08c-5cc1-4b3e-b4a8-e43bc068aa56",
     "status": "Preview and approve",
@@ -358,4 +325,3 @@ Sample signed payload
     ...
 }
 ```
-

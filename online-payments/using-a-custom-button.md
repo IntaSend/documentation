@@ -10,7 +10,7 @@ The [standard button](payment-button.md) approach is the simplest way to start c
 
 Include IntaSend plugin before closing your `</head>` tag.
 
-```text
+```
 <script src="https://unpkg.com/intasend-inlinejs-sdk@3.0.2/build/intasend-inline.js"></script>
 ```
 
@@ -18,7 +18,7 @@ Include IntaSend plugin before closing your `</head>` tag.
 
 Note, unlike the standard button, the custom button does not require you to provide `data-*` attributes and **IntaSend class identifier**. For the sake of demonstration, we are using an ID attribute that we'll use to trigger the `onclick` event in the next code block.
 
-```text
+```
 <button id="customBtn">Pay USD 10</button>
 ```
 
@@ -26,7 +26,7 @@ Note, unlike the standard button, the custom button does not require you to prov
 
 Add your publishable public key and set the enviroonment.
 
-```text
+```
 let customBtnObj = new window.IntaSend({
     publicAPIKey: "<--REPLACE-WITH-YOUR-PUBLISHABLE-KEY-->",
     live: false // set to true when going live
@@ -37,7 +37,7 @@ let customBtnObj = new window.IntaSend({
 
 Finally start payment process using the `.run({...})` method. Set the required payment options as per your need. [Here is a full list of options](payment-data-parameters.md) you can pass to the `.run({...})` method.
 
-```text
+```
 document.getElementById("customBtn").onclick = () => {
     customBtnObj.run({
         amount: 10,
@@ -54,4 +54,3 @@ document.getElementById("customBtn").onclick = () => {
 ```
 
 Finally, capture payment results and do something on success and failure.
-

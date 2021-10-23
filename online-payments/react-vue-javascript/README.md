@@ -8,13 +8,13 @@ description: How to integrate IntaSend payment in your JavaScript web framework.
 
 IntaSend inlinejs-sdk is available using `yarn` or `npm`
 
-```text
+```
 yarn add intasend-inlinejs-sdk
 ```
 
 ## 2. Import IntaSend in your code
 
-```text
+```
 const IntaSend = require("intasend-inlinejs-sdk")
 ```
 
@@ -22,7 +22,7 @@ const IntaSend = require("intasend-inlinejs-sdk")
 
 You'll need your `publicAPIKey` and ensure the `live` flag is well set depending on your environment.
 
-```text
+```
 const intaSendInstance = new IntaSend({
     publicAPIKey: "<YOUR-API-KEY>",
     live: true //or false for sandbox environment
@@ -32,9 +32,9 @@ const intaSendInstance = new IntaSend({
 
 ## 4. Load payment screen
 
-The `.run()` method will load the payment popup. Feel free to set the payment setting e.g the amount and currency based on your need. Here is a [reference](../payment-data-parameters.md) of options you can add.
+The` .run()` method will load the payment popup. Feel free to set the payment setting e.g the amount and currency based on your need. Here is a [reference](../payment-data-parameters.md) of options you can add.
 
-```text
+```
 // Load payment popup with the run() function
 intaSendInstance.run({amount: 10, currency: "USD"})
 ```
@@ -43,9 +43,8 @@ intaSendInstance.run({amount: 10, currency: "USD"})
 
 Finally, do something on payment complete or failure.
 
-```text
+```
 intaSendInstance
 .on("COMPLETE", (results) => alert("COMPLETE"))
 .on("FAILED", (results) => alert("FAILED"))
 ```
-

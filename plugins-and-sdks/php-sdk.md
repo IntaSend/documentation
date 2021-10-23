@@ -6,15 +6,15 @@ description: IntaSend Payment PHP SDK for Laravel and other framework
 
 ## How to install
 
-```text
+```
 composer require intasend/intasend-php
 ```
 
-### How to use \(Code examples\)
+### How to use (Code examples)
 
 Obtain your [API token and Publishable key](../send-payments/api-authentication.md#how-to-generate-api-token) from your account i.e under Settings - API Keys panel.
 
-```text
+```
 # Remember to switch of test when going live by set it to False
 
 # Wallets Management
@@ -130,4 +130,3 @@ print_r(response);
 # Payment Collection(M-Pesa)
 use IntaSend\IntaSendPHP\Collection;
 ```
-

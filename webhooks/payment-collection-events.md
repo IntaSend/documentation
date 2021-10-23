@@ -8,7 +8,7 @@ Payment payload will be sent to you in real-time every time when the **`state`**
 
 #### Collection payload example
 
-```text
+```
 {
   "invoice_id": "BRZKGPR",
   "state": "PROCESSING",
@@ -31,10 +31,9 @@ Payment payload will be sent to you in real-time every time when the **`state`**
 
 State fields reference
 
-| State | Description |
-| :--- | :--- |
-| PENDING | The transaction has just been logged. No action was taken. |
-| PROCESSING | The customer is in the process of making payment |
-| COMPLETED | The transaction is complete - successful. |
-| FAILED | The transaction has failed - Check failed\_reason field for more details |
-
+| State      | Description                                                              |
+| ---------- | ------------------------------------------------------------------------ |
+| PENDING    | The transaction has just been logged. No action was taken.               |
+| PROCESSING | The customer is in the process of making payment                         |
+| COMPLETED  | The transaction is complete - successful.                                |
+| FAILED     | The transaction has failed - Check failed\_reason field for more details |

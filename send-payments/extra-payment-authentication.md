@@ -6,15 +6,15 @@ description: >-
 
 # PSD2 and Digital Keys
 
-To enforce the security of our APIs and ensure that funds can only be moved by an authorized entity, IntaSend recommends that transfer APIs must be initiated and signed before processing. 
+To enforce the security of our APIs and ensure that funds can only be moved by an authorized entity, IntaSend recommends that transfer APIs must be initiated and signed before processing.&#x20;
 
 PSD2 standard suggests that payment transactions must be signed and authenticated with at least two steps i.e a password or token, and something that only the merchants know e.g an OTP or a security key.
 
-The following guide breaks down how this should be done and also provide code examples to help you get started.  
+The following guide breaks down how this should be done and also provide code examples to help you get started. &#x20;
 
-**Note: This procedure is currently mandatory for the Send Money \(Disbursement\) approval API.**
+**Note: This procedure is currently mandatory for the Send Money (Disbursement) approval API.**
 
-![Devices signing and verification processes.](../.gitbook/assets/openssl-guide.png)
+![Devices signing and verification processes.](../.gitbook/assets/OpenSSL-Guide.png)
 
 ### How to add setup the public key for your API/Integrating device
 
@@ -30,7 +30,7 @@ openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -out private-key.pe
 
 Use the private key to generate its corresponding public key.
 
-```text
+```
 openssl pkey -in private-key.pem -out public-key.pem -pubout
 ```
 
@@ -45,15 +45,15 @@ Copy the content of **public-key.pem** for use in the next session i.e adding to
 
 Navigate to the **API Devices** section under your settings section and add your newly generated **public key**.
 
-![API integration hosting devices](../.gitbook/assets/image%20%281%29.png)
+![API integration hosting devices](<../.gitbook/assets/image (8).png>)
 
-![Fill in the device details plus the public key](../.gitbook/assets/image%20%289%29.png)
+![Fill in the device details plus the public key](<../.gitbook/assets/image (9).png>)
 
 ### Reference - More on digital signatures
 
 In the diagram below note, the SecretKey is used to sign the message and the Public key is used to verify the message. IntaSend retains the Public key in its database for verification purposes. You must securely store the private key for signing messages e.g nonce when approving transactions with the API.
 
-![](../.gitbook/assets/image%20%2810%29.png)
+![](<../.gitbook/assets/image (3).png>)
 
 ## OpenSSL libraries
 
@@ -68,7 +68,7 @@ Below is a list of OpenSSL libraries and code examples for various languages.
 
 {% tabs %}
 {% tab title="Python" %}
-```text
+```
 import OpenSSL
 from OpenSSL import crypto as OpenSSLCrypto
 
@@ -89,4 +89,3 @@ def verify(public_key, signature_hex, message):
 ```
 {% endtab %}
 {% endtabs %}
-

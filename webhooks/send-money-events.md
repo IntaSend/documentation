@@ -8,7 +8,7 @@ Send money event payload will be sent to you in real-time every time when the **
 
 #### Payload example
 
-```text
+```
 {
   "tracking_id": "7e96bc5c-191c-40bd-94f2-be4a0226c69c",
   "status": "Preview and approve",
@@ -34,14 +34,13 @@ Send money event payload will be sent to you in real-time every time when the **
 
 Status field reference
 
-| Status | Description |
-| :--- | :--- |
-| Preview and Approve | Batch pending approval state |
-| Confirming balance | Confirming account balance |
-| Processing \(FLT\) | Preparing processing on IntaSend side |
-| Failed Processing | Failed to process the transactions - end early |
-| Processing \(FLTRSLT\) | Continuer processing on IntaSend side |
-| Sending payment | Sending payment requests to providers e.g M-Pesa |
-| Processing payment | Post send payment checks and updates |
-| Completed | Completed processing the batch - check individual transactions for status i.e failed or complete |
-
+| Status               | Description                                                                                      |
+| -------------------- | ------------------------------------------------------------------------------------------------ |
+| Preview and Approve  | Batch pending approval state                                                                     |
+| Confirming balance   | Confirming account balance                                                                       |
+| Processing (FLT)     | Preparing processing on IntaSend side                                                            |
+| Failed Processing    | Failed to process the transactions - end early                                                   |
+| Processing (FLTRSLT) | Continuer processing on IntaSend side                                                            |
+| Sending payment      | Sending payment requests to providers e.g M-Pesa                                                 |
+| Processing payment   | Post send payment checks and updates                                                             |
+| Completed            | Completed processing the batch - check individual transactions for status i.e failed or complete |

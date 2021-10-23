@@ -8,7 +8,7 @@ Chargeback event payload will be sent to you in real-time every time when the **
 
 #### Payload example
 
-```text
+```
 {
   "chargeback_id": "VYBBVY4",
   "transaction": {
@@ -65,11 +65,10 @@ Chargeback event payload will be sent to you in real-time every time when the **
 
 #### Status field reference
 
-| Value | Description |
-| :--- | :--- |
-| PENDING | Chargeback has just been recorded |
-| CANCELLED | The Chargeback request has been canceled |
-| DISPUTED | A dispute has been recorded against the chargeback |
-| OVERDUE | The chargeback has been marked as delayed. Urgent action is needed to settle it. |
-| COMPLETED | The chargeback issue has been resolved and closed successfully. |
-
+| Value     | Description                                                                      |
+| --------- | -------------------------------------------------------------------------------- |
+| PENDING   | Chargeback has just been recorded                                                |
+| CANCELLED | The Chargeback request has been canceled                                         |
+| DISPUTED  | A dispute has been recorded against the chargeback                               |
+| OVERDUE   | The chargeback has been marked as delayed. Urgent action is needed to settle it. |
+| COMPLETED | The chargeback issue has been resolved and closed successfully.                  |

@@ -8,23 +8,33 @@ IntaSend supports RESTFul API and this can be used in payment collections e.g M-
 
 The following SDK tools will be helpful to make your integration process easier.
 
-{% page-ref page="../send-payments/api-authentication.md" %}
+{% content-ref url="../send-payments/api-authentication.md" %}
+[api-authentication.md](../send-payments/api-authentication.md)
+{% endcontent-ref %}
 
-{% page-ref page="python.md" %}
+{% content-ref url="python.md" %}
+[python.md](python.md)
+{% endcontent-ref %}
 
-{% page-ref page="php-sdk.md" %}
+{% content-ref url="php-sdk.md" %}
+[php-sdk.md](php-sdk.md)
+{% endcontent-ref %}
 
 {% hint style="info" %}
 The following framework-based tools are useful for easy payment collection integration.
 {% endhint %}
 
-{% page-ref page="../online-payments/woocommerce.md" %}
+{% content-ref url="../online-payments/woocommerce.md" %}
+[woocommerce.md](../online-payments/woocommerce.md)
+{% endcontent-ref %}
 
-{% page-ref page="../online-payments/wordpress.md" %}
+{% content-ref url="../online-payments/wordpress.md" %}
+[wordpress.md](../online-payments/wordpress.md)
+{% endcontent-ref %}
 
-{% page-ref page="../online-payments/flutter-mobile.md" %}
-
-
+{% content-ref url="../online-payments/flutter-mobile.md" %}
+[flutter-mobile.md](../online-payments/flutter-mobile.md)
+{% endcontent-ref %}
 
 
 

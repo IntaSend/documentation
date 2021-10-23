@@ -14,31 +14,31 @@ Click the following link to download the latest plugin - [https://intasend-publi
 
 ## 2. Install and activate plugin
 
-![](../.gitbook/assets/image%20%2821%29.png)
+![](<../.gitbook/assets/image (16).png>)
 
-![](../.gitbook/assets/image%20%2817%29.png)
+![](<../.gitbook/assets/image (17).png>)
 
 Make sure the plugin is activated and you can see it under the installed plugins list.
 
-## 3. Configure IntaSend 
+## 3. Configure IntaSend&#x20;
 
-Locate IntaSend Payment panel on your dashboard \(sidebar section\).
+Locate IntaSend Payment panel on your dashboard (sidebar section).
 
-![](../.gitbook/assets/image%20%2816%29.png)
+![](<../.gitbook/assets/image (18).png>)
 
 ## 4. Add your API Key
 
 ![Get API Key from your IntaSend dashboard under setting panels.](../.gitbook/assets/get-publishable-key.png)
 
-![](../.gitbook/assets/image%20%2819%29.png)
+![](<../.gitbook/assets/image (19).png>)
 
 Use the redirect URL to specify the page where you would like your customers to be sent on payment success.
 
 ## 5. Add your button
 
-Setup up your button by specifying the charge amount, currency, and payments tariffs.  
+Setup up your button by specifying the charge amount, currency, and payments tariffs. &#x20;
 
-![](../.gitbook/assets/image%20%2822%29.png)
+![](<../.gitbook/assets/image (20).png>)
 
 Click "Create Button" to create your new button.
 
@@ -46,13 +46,12 @@ Click "Create Button" to create your new button.
 
 Your new button will be added under the **Payment Buttons** list as shown below. You'll need the shortcode for use in your post.
 
-![List of available payment button shortcodes](../.gitbook/assets/image%20%2818%29.png)
+![List of available payment button shortcodes](<../.gitbook/assets/image (21).png>)
 
 Create a new shortcode block in your post/page and copy the newly created button shortcode, and add it to your post i.e where you would like to position your payment button.
 
-![A sample post with shortcode block for payment button.](../.gitbook/assets/image%20%2820%29.png)
+![A sample post with shortcode block for payment button.](<../.gitbook/assets/image (22).png>)
 
 Save changes and publish the page. Congratulations, you are now ready to start receiving payments.
 
-![A sample page with IntaSend enabled payment button.](../.gitbook/assets/image%20%2823%29.png)
-
+![A sample page with IntaSend enabled payment button.](<../.gitbook/assets/image (23).png>)
