@@ -11,7 +11,7 @@ The [standard button](payment-button.md) approach is the simplest way to start c
 Include IntaSend plugin before closing your `</head>` tag.
 
 ```
-<script src="https://unpkg.com/intasend-inlinejs-sdk@3.0.2/build/intasend-inline.js"></script>
+<script src="https://unpkg.com/intasend-inlinejs-sdk@3.0.4/build/intasend-inline.js"></script>
 ```
 
 ## 2. Add your custom button
