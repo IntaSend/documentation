@@ -16,3 +16,4 @@ Below are code examples that we have put together for testing
 * WooCommerce demo site - [http://54.86.135.148](http://54.86.135.148)
 * Bubble no-code example site - [https://is-test-shop.bubbleapps.io/version-test](https://is-test-shop.bubbleapps.io/version-test)
 * ReactJS Example - [https://github.com/felixcheruiyot/intasend-reactjs-example](https://github.com/felixcheruiyot/intasend-reactjs-example)
+* Live demo app built on Vue - [https://github.com/felixcheruiyot/intasend-vue-ecommerce/](https://github.com/felixcheruiyot/intasend-vue-ecommerce/)  (Source code - [https://github.com/felixcheruiyot/intasend-vue-ecommerce/](https://github.com/felixcheruiyot/intasend-vue-ecommerce/))
