@@ -22,7 +22,13 @@ The following guide breaks down how this should be done and also provide code ex
 
 IntaSend recommends that you generate a private key using RSA and a key size of 2048 bits
 
-Generating your private key. This key must never be shared. Must be stored in a secure place and where only your application can access it.
+#### Option 1 - Online key generator (easier way)
+
+[https://cryptotools.net/rsagen](https://cryptotools.net/rsagen) offers an interface where you can generate a 2048 RSA key. After generating the key pair, copy the public key to the IntaSend dashboard and ensure you keep the private key safe. Do not reveal your private key. [How to add the public key to your IntaSend account.](extra-payment-authentication.md#2.-add-the-public-key-to-your-account)
+
+#### Option 2 - Generate it yourself (OpenSSL)
+
+Generating your private key. This key must never be shared. Must be stored in a secure place and where only your application can access it. You need [openssl](https://www.openssl.org) installed. Most Mac OS and Linux distros have it already installed.
 
 ```
 openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -out private-key.pem
