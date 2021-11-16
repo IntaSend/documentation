@@ -1,10 +1,19 @@
 ---
 description: >-
-  Send money from your IntaSend account to your mobile money account i.e M-PESA
+  Single API to send money from your IntaSend account to your mobile money
+  account i.e M-PESA Send Money, M-Pesa B2B API (PayBill and TillNumber) pays,
   and IntaSend P2P.
 ---
 
 # Send Money
+
+Currently you can send money to the following providers directly from your IntaSend wallet.
+
+| Transfer Type                          | Provider API Code |
+| -------------------------------------- | ----------------- |
+| IntaSend to IntaSend transfer          | INTASEND          |
+| M-Pesa send money (B2C)                | MPESA-B2C         |
+| M-Pesa send to Till and Paybills (B2B) | MPESA-B2B         |
 
 {% swagger baseUrl="https://sandbox.intasend.com" path="/api/v1/send-money/initiate/" method="post" summary="Step 1 - Initiate send money" %}
 {% swagger-description %}
@@ -24,7 +33,7 @@ Create device under API section on the dashboard, add a public key, and obtain i
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="provider" type="string" %}
-Options are: MPESA-B2C, INTASEND
+Options are: MPESA-B2C, INTASEND, MPESA-B2B
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="callback_url" type="string" %}
@@ -75,11 +84,12 @@ KES
 
 Transaction list items
 
-| Parameter | Type    | Required | Description                                                                                                   |
-| --------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------- |
-| name      | string  | Yes      | Beneficiary name                                                                                              |
-| account   | integer | Yes      | Beneficiary phone number. Must be in the format `2547xxxxxxxxx` - note the country prefix `254` without a `+` |
-| amount    | integer | Yes      | Amount to send                                                                                                |
+| Parameter     | Type    | Required    | Description                                                                                                   |
+| ------------- | ------- | ----------- | ------------------------------------------------------------------------------------------------------------- |
+| name          | string  | Yes         | Beneficiary name                                                                                              |
+| account       | integer | Yes         | Beneficiary phone number. Must be in the format `2547xxxxxxxxx` - note the country prefix `254` without a `+` |
+| amount        | integer | Yes         | Amount to send                                                                                                |
+| account\_type | string  | Conditional | Required only for M-Pesa B2B. Acceptable fields are: **`Paybill`** or **`TillNumber`**                        |
 
 NB - Obtain tracking\_id for the purpose of [checking status](payment-status.md).
 
