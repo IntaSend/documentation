@@ -1,8 +1,8 @@
 ---
 description: >-
   Single API to send money from your IntaSend account to your mobile money
-  account i.e M-PESA Send Money, M-Pesa B2B API (PayBill and TillNumber) pays,
-  and IntaSend P2P.
+  account i.e M-PESA, send to PayBill and TillNumber (M-Pesa B2B API), and
+  IntaSend P2P.
 ---
 
 # Send Money
