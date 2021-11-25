@@ -1,7 +1,7 @@
 ---
 description: >-
   You'll be required to authenticate your requests when using transfer and
-  accounts APIs. The following guide provide details on how to generate an
+  accounts APIs. The following guidelines provide details on how to generate an
   authentication token.
 ---
 
