@@ -4,7 +4,7 @@ description: Capture real-time events and send them to your backend for further 
 
 # WebHooks
 
-## What is a webhook and how does it work?
+## What are webhooks and how does it work?
 
 Webhooks are user-defined callbacks that receive messages based on events triggered in the system.
 
