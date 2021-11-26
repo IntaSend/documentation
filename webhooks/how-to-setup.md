@@ -2,13 +2,13 @@
 description: How to setup your webhook destination URL.
 ---
 
-# How to set up a webhook
+# Webhook Setup
 
-## What are webhooks?
+## How to set up a webhook
 
-_**Webhooks**_ are automated messages sent from apps when something happens. They have a message—or payload—and are sent to a unique URL.
+_**Webhook events**_ are basically automated messages sent from apps when something happens. They have a message—or payload—and are sent to a unique URL.
 
-IntaSend supports webhooks where we send collection, send money, and chargeback events whenever the object's state changes.
+[As mentioned earlier](./), IntaSend supports webhooks where we send collection, send money, and chargeback events whenever the object's state changes.
 
 Webhook events can be used to validate payments transactions, log collections, and chargeback actions in real-time.
 
@@ -20,5 +20,5 @@ From the IntaSend dashboard, select Webhooks and set up your endpoint URL, and p
 
 ### Managing requests and failure
 
-To ensure the service works well and efficiently, we recommend that the provided endpoint be up around the clock. The webhook will deactivate if IntaSend fails to send more than 20 subsequent requests to the endpoint. You can only re-activate by contact customer support. Please ensure that your endpoint is back up and running before contacting customer support.
+To ensure the service works well and efficiently, we recommend that the provided endpoint be up around the clock. The webhook will deactivate if IntaSend fails to send more than 20 subsequent requests to the endpoint. You can only re-activate by contacting customer support. Please ensure that your endpoint is back up and running before contacting customer support.
 
