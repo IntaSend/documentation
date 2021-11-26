@@ -4,6 +4,8 @@ description: API end-points for working with wallets and sub-accounts
 
 # Wallets API
 
+## How to integrate wallets API
+
 These APIs will help you to create and manage **WORKING** wallets. By default, all IntaSend accounts have **SETTLEMENT** accounts which act as main accounts. **WORKING** wallets are basically sub-accounts that you can use to isolate your customers'/merchants' funds. Each customer can have their own wallets within IntaSend that you will manage on their behalf.
 
 {% swagger baseUrl="https://sandbox.intasend.com" path="/api/v1/wallets/" method="get" summary="List available wallets" %}

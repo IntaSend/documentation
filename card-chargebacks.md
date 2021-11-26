@@ -6,6 +6,8 @@ description: >-
 
 # Refunds
 
+## How to automate payments refunds
+
 Before using this resource, please read carefully our article on how we handle [Chargebacks](https://intasend.com/chargebacks/) and the [Terms and Conditions](https://intasend.com/terms/) statements on the same.
 
 These endpoints require [authentication](send-payments/api-authentication.md#obtain-authentication-token).

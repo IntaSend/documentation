@@ -4,6 +4,8 @@ description: Manage digital wallets on top of the IntaSend's secure wallets infr
 
 # Wallet as a service
 
+## Introduction - Wallets API
+
 Wallets API enables you to extend IntaSend's capability and automate your payment workflows. This API requires [authentication](../send-payments/api-authentication.md).
 
 Here are some of the use-cases you can build using our wallets API:
