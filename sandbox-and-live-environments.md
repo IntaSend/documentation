@@ -6,6 +6,8 @@ description: >-
 
 # Testing
 
+## Resources for IntaSend Integration and API testing
+
 IntaSend provides both staging and live environments.
 
 All requests and callback URLs to this environment must be made through a secure network protocol (HTTPS).&#x20;

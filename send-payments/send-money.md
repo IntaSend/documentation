@@ -7,7 +7,9 @@ description: >-
 
 # Send Money
 
-Currently you can send money to the following providers directly from your IntaSend wallet.
+## How to send money with the API&#x20;
+
+Currently, you can send money to the following providers directly from your IntaSend [wallet](../wallet-as-a-service/).
 
 | Transfer Type                          | Provider API Code |
 | -------------------------------------- | ----------------- |

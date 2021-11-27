@@ -4,15 +4,17 @@ description: How to install and use IntaSend's plugin for WordPress sites.
 
 # WordPress
 
+## Introduction to IntaSend WordPress plugin
+
 In this guide, you'll learn how to install, activate, and use the IntaSend payment buttons on your WordPress site. We have created a step-by-step guide and a video to help you get started.
 
 {% embed url="https://www.loom.com/share/279fae192ae44b86bcf63a3eb44b8ac9" %}
 
-## 1. Download IntaSend plugin for WordPress
+### 1. Download IntaSend plugin for WordPress
 
 Click the following link to download the latest plugin - [https://intasend-public-share.s3.eu-central-1.amazonaws.com/IntaSend-wordpress-plugin.zip](https://intasend-public-share.s3.eu-central-1.amazonaws.com/IntaSend-wordpress-plugin.zip)
 
-## 2. Install and activate plugin
+### 2. Install and activate the plugin
 
 ![](<../.gitbook/assets/image (16).png>)
 
@@ -20,13 +22,13 @@ Click the following link to download the latest plugin - [https://intasend-publi
 
 Make sure the plugin is activated and you can see it under the installed plugins list.
 
-## 3. Configure IntaSend&#x20;
+### 3. Configure IntaSend&#x20;
 
-Locate IntaSend Payment panel on your dashboard (sidebar section).
+Locate the IntaSend Payment panel on your dashboard (sidebar section).
 
 ![](<../.gitbook/assets/image (18).png>)
 
-## 4. Add your API Key
+### 4. Add your API Key
 
 ![Get API Key from your IntaSend dashboard under setting panels.](../.gitbook/assets/get-publishable-key.png)
 
@@ -34,7 +36,7 @@ Locate IntaSend Payment panel on your dashboard (sidebar section).
 
 Use the redirect URL to specify the page where you would like your customers to be sent on payment success.
 
-## 5. Add your button
+### 5. Add your button
 
 Setup up your button by specifying the charge amount, currency, and payments tariffs. &#x20;
 
@@ -42,7 +44,7 @@ Setup up your button by specifying the charge amount, currency, and payments tar
 
 Click "Create Button" to create your new button.
 
-## 6. Get your button short-code and add it to your post
+### 6. Get your button short-code and add it to your post
 
 Your new button will be added under the **Payment Buttons** list as shown below. You'll need the shortcode for use in your post.
 

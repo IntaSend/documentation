@@ -6,6 +6,8 @@ description: >-
 
 # Code Examples
 
+## Examples code and no-code projects using IntaSend's payments API
+
 IntaSend integration tools provide developers with various options so as to create a robust payment experience.
 
 Below are code examples that we have put together for testing

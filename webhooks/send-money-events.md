@@ -4,6 +4,8 @@ description: Send money events fields and example
 
 # Send money events
 
+## Webhook send money events examples and definition
+
 Send money event payload will be sent to you in real-time every time when the **`status`** field changes. Please ensure you have validated the challenge provided.
 
 #### Payload example

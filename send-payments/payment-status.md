@@ -4,6 +4,8 @@ description: How to obtain send money payment status.
 
 # Send Money Status
 
+## Handling send money status
+
 {% swagger baseUrl="https://sandbox.intasend.com" path="/api/v1/send-money/status/" method="post" summary="Get send money status" %}
 {% swagger-description %}
 This endpoint allows you to check payment status.

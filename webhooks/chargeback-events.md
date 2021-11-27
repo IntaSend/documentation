@@ -4,6 +4,8 @@ description: Chargeback events example
 
 # Chargeback events
 
+## Webhook chargebacks events examples and definition
+
 Chargeback event payload will be sent to you in real-time every time when the **`status`** field changes. Please ensure you have validated the challenge provided.
 
 #### Payload example

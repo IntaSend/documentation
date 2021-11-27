@@ -4,7 +4,7 @@ description: IntaSend Payment PHP SDK for Laravel and other framework
 
 # PHP SDK
 
-## How to install
+## How to install and use IntaSend PHP SDK
 
 ```
 composer require intasend/intasend-php

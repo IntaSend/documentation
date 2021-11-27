@@ -4,6 +4,8 @@ description: Collection event payload example
 
 # Payment collection events
 
+## Webhook collection events examples and definition
+
 Payment payload will be sent to you in real-time every time when the **`state`** field changes. Please ensure you have validated the challenge earlier provided and your reference number under the **`api_ref`** field.
 
 #### Collection payload example

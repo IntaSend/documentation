@@ -4,7 +4,9 @@ description: How IntaSend handle API errors
 
 # Errors reference
 
-IntaSend uses the standard HTTP error codes to communicate failed requests to the APIs. Each failed response is accompanied with a detailed message on the failure.
+## Common API HTTP errors and their meaning
+
+IntaSend uses the standard HTTP error codes to communicate failed requests to the APIs. Each failed response is accompanied by a detailed message on the failure.
 
 Here is an example of failed authentication message details with status code 401.
 

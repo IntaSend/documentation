@@ -6,6 +6,8 @@ description: >-
 
 # Direct M-Pesa STK-Push
 
+## How to trigger M-Pesa STK-Push/Express with the API
+
 Use the collection API if you prefer to automatically trigger M-Pesa STK payment requests from your backend using Python, Java,  PHP,  and Go.
 
 {% swagger baseUrl="https://sandbox.intasend.com" path="/api/v1/payment/collection/" method="post" summary="Send M-Pesa STK-Push request" %}

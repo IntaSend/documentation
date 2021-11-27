@@ -4,9 +4,11 @@ description: How to create check-out page using IntaSend 's checkout API
 
 # Checkout API
 
-To create a checkout page, simply send a post request to `/api/v1/checkout/` with the [payment data parameter](payment-data-parameters.md)s as payload.
+## How to use REST API to create a sharable payment URL
 
-## Code examples
+To create a checkout page, a payment checkout URL that can be shared to the client to complete payment on email or social media, simply send a post request to `/api/v1/checkout/` with the [payment data parameter](payment-data-parameters.md)s as payload.
+
+### Code examples
 
 Send **POST** request to generate a **checkout URL**, then redirect the user to the checkout link to securely complete payment.
 
@@ -198,13 +200,13 @@ The checkout request returns a JSON response with a **`url`** field. Redirect th
 }
 ```
 
-## Code Example using Axios (JavaScript)
+### Code Example using Axios (JavaScript)
 
 {% hint style="info" %}
 Here is a quick example of how to create a link using JavaScript. Note this can be done from any backend e.g PHP, Python, and Java
 {% endhint %}
 
-## 1. Install Axios
+### 1. Install Axios
 
 We'll use Axios to send HTTP post requests. Feel free to use any other tool that works well for you.
 
@@ -212,7 +214,7 @@ We'll use Axios to send HTTP post requests. Feel free to use any other tool that
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 ```
 
-## 2. Create a check-out link request
+### 2. Create a check-out link request
 
 Send a POST request to the API environment that you'd wish to create the link. Learn more on test and live environment [here](../sandbox-and-live-environments.md).
 

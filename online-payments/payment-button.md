@@ -6,7 +6,9 @@ description: >-
 
 # Collect a payment
 
-## 1. Install IntaSend plugin for web
+## How to add IntaSend payments on your website
+
+### 1. Install IntaSend plugin for web
 
 Add the latest IntaSend web plugin before closing your `</head>` tag
 
@@ -14,7 +16,7 @@ Add the latest IntaSend web plugin before closing your `</head>` tag
 <script src="https://unpkg.com/intasend-inlinejs-sdk@3.0.4/build/intasend-inline.js"></script>
 ```
 
-## 2. Add the payment button
+### 2. Add the payment button
 
 Add the IntaSend standard button where you want the customers to click and initiate checkout.
 
@@ -24,7 +26,7 @@ Add the IntaSend standard button where you want the customers to click and initi
 
 Note: For standard button integration, IntaSend uses the class name to `intaSendPayButton` to recognize the button and trigger the payment action on click. On the payment button, you can add already [available options](payment-data-parameters.md) e.g amount, currency, customer emails, etc using the `data-*` attribute. Learn more on the available payment data options [here](payment-data-parameters.md).
 
-## 3. Complete setup
+### 3. Complete setup
 
 Complete setup by setting your publishable key and other options e.g redirect URL. Access your public API Key from your account under settings - API keys panel. IntaSend also provides a sandbox environment for [testing](../sandbox-and-live-environments.md)&#x20;
 

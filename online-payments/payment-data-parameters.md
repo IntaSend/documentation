@@ -4,6 +4,8 @@ description: List of options you can provide to improve the user check out exper
 
 # Payment data parameters
 
+## List of payments payload fields
+
 The following options can be parsed to the payment button during integration using the `data-*` attribute e.g `data-email="user@example.com"`. If any of this data is available, it is highly recommended that you provide them so that we can shorten the payment form and provide a better user experience. Customers will not be prompted to provide this information once if already been added.
 
 This schema is also useful for [custom button integration](using-a-custom-button.md).

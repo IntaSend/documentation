@@ -6,6 +6,8 @@ description: >-
 
 # PSD2 and Digital Keys
 
+## What is PSD2 and how does it work?
+
 To enforce the security of our APIs and ensure that funds can only be moved by an authorized entity, IntaSend recommends that transfer APIs must be initiated and signed before processing.&#x20;
 
 PSD2 standard suggests that payment transactions must be signed and authenticated with at least two steps i.e a password or token, and something that only the merchants know e.g an OTP or a security key.
@@ -61,7 +63,7 @@ In the diagram below note, the SecretKey is used to sign the message and the Pub
 
 ![](<../.gitbook/assets/image (3).png>)
 
-## OpenSSL libraries
+### OpenSSL libraries
 
 Below is a list of OpenSSL libraries and code examples for various languages.
 

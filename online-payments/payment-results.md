@@ -4,6 +4,8 @@ description: Payment results are returned by the events emitter.
 
 # Payment results
 
+## How to capture payment results after payment with the JavaScript SDK
+
 IntaSend SDK event returns results with details like api\_ref, charges incurred, etc.
 
 ```bash

@@ -6,6 +6,8 @@ description: >-
 
 # WooCommerce
 
+## How to add IntaSend payments to your WooCommerce website
+
 IntaSend has built a secure payment gateway to power e-commerce sites. IntaSend is platform is secure and PCI-DSS compliant. We have built tools to make integration easier for businesses and developers.
 
 Ready to add payments to your site? Below is a step-by-step video and guide on how to integrate payment on WooCommerce. Feel free to also test our demo site here [http://54.86.135.148/](http://54.86.135.148).
@@ -14,15 +16,15 @@ Ready to add payments to your site? Below is a step-by-step video and guide on h
 How to setup and install IntaSend Plugin for WooCommerce
 {% endembed %}
 
-## 1. Download the latest IntaSend WooCommerce Plugin
+### 1. Download the latest IntaSend WooCommerce Plugin
 
 Follow this link to download our latest plugin - [https://intasend-public-share.s3.eu-central-1.amazonaws.com/intasend-woocommerce-plugin.zip](https://intasend-public-share.s3.eu-central-1.amazonaws.com/intasend-woocommerce-plugin.zip)
 
-## 2. Log in to your WP-Admin and upload the plugin
+### 2. Log in to your WP-Admin and upload the plugin
 
 ![](../.gitbook/assets/step-1.png)
 
-## 3. Activate the plugin
+### 3. Activate the plugin
 
 Click the activate plugin to confirm the installation.
 
@@ -32,7 +34,7 @@ After the activate action, your plugin will be listed under the plugins section.
 
 ![](../.gitbook/assets/step-3.png)
 
-## 4. Complete Payments setting in WooCommerce
+### 4. Complete Payments setting in WooCommerce
 
 After activation, the plugin will be automatically be added to your **WooCommerce Settings tab** under the** Payments section**. Please check the screenshot below.
 
@@ -56,7 +58,7 @@ Configure your API Key and account default.
 
 ![](../.gitbook/assets/complete-setup.png)
 
-## 5 . Test your integration
+### 5 . Test your integration
 
 To test your integration, add items to your cart and proceed to checkout. You should be able to see **Pay with IntaSend** added as your payment method.
 

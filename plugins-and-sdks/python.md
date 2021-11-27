@@ -4,13 +4,13 @@ description: Official Python SDK
 
 # Python SDK
 
-## How to install
+## How to install and use IntaSend Python SDK
 
 ```
 pip install intasend-python
 ```
 
-## Authenticating service
+### Authenticating service
 
 Obtain your [API token and Publishable key](../send-payments/api-authentication.md#how-to-generate-api-token) from your account i.e under Settings - API Keys panel.
 
@@ -26,7 +26,7 @@ publishable_key = "YOUR-PUBLISHABLE-KEY"
 service = APIService(token="token",publishable_key=publishable_key, private_key=private_key)
 ```
 
-## How to generate PRIVATE KEY
+### How to generate PRIVATE KEY
 
 Use the following helper function to generate a RSA Key for nonce signing. Keep your private\_key safe and share the public key with IntaSend. Note: These key pair is required only if you are sending money.
 
@@ -38,7 +38,7 @@ print(private_key)
 print(public_key)
 ```
 
-## Code Examples
+### Code Examples
 
 Below are few usage examples for your reference.
 
