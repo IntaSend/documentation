@@ -86,12 +86,13 @@ KES
 
 Transaction list items
 
-| Parameter     | Type    | Required    | Description                                                                                                   |
-| ------------- | ------- | ----------- | ------------------------------------------------------------------------------------------------------------- |
-| name          | string  | Yes         | Beneficiary name                                                                                              |
-| account       | integer | Yes         | Beneficiary phone number. Must be in the format `2547xxxxxxxxx` - note the country prefix `254` without a `+` |
-| amount        | integer | Yes         | Amount to send                                                                                                |
-| account\_type | string  | Conditional | Required only for M-Pesa B2B. Acceptable fields are: **`Paybill`** or **`TillNumber`**                        |
+| Parameter          | Type    | Required    | Description                                                                                                   |
+| ------------------ | ------- | ----------- | ------------------------------------------------------------------------------------------------------------- |
+| name               | string  | Yes         | Beneficiary name                                                                                              |
+| account            | integer | Yes         | Beneficiary phone number. Must be in the format `2547xxxxxxxxx` - note the country prefix `254` without a `+` |
+| amount             | integer | Yes         | Amount to send                                                                                                |
+| account\_type      | string  | Conditional | Required only for M-Pesa B2B. Acceptable fields are: **`Paybill`** or **`TillNumber`**                        |
+| account\_reference | string  | Conditional | Required only for M-Pesa B2B where **`account_type`** is **`Paybill`**                                        |
 
 NB - Obtain tracking\_id for the purpose of [checking status](payment-status.md).
 
@@ -99,6 +100,8 @@ NB - Obtain tracking\_id for the purpose of [checking status](payment-status.md)
 
 {% tabs %}
 {% tab title="Python" %}
+Find more code examples in our [**Python SDK**](https://github.com/IntaSend/intasend-python) on Github
+
 ```python
 import requests
 
@@ -118,6 +121,8 @@ print(response.text.encode('utf8'))
 {% endtab %}
 
 {% tab title="PHP" %}
+Find more code examples in our [**PHP SDK**](https://github.com/IntaSend/intasend-php) on GitHub
+
 ```php
 <?php
 
