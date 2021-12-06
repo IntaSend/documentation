@@ -8,7 +8,7 @@ description: >-
 
 ## Introduction - Payments API for developers
 
-IntaSend enables businesses to receive and disburse payments. Supported channels are mobile, card, and bank payments. For developers, we strongly believe that payment integration should be easy, functional, and secure. IntaSend is built based on our many years of payment integrations assignments and experience. We hope we are able to make your life easier through our tools and technology.
+IntaSend payments API enables businesses to receive and disburse payments. Supported channels are mobile, card, and bank payments. For developers, we strongly believe that payment integration should be easy, functional, and secure. IntaSend is built based on our many years of payment integrations assignments and experience. We hope we are able to make your life easier through our tools and technology.
 
 ### How to start collecting payments
 
