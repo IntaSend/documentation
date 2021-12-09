@@ -28,3 +28,4 @@ This schema is also useful for [custom button integration](using-a-custom-button
 | method         | Optional - if specified only the method will be used. Options are M-PESA, CARD-PAYMENT. Leave blank to show all payment methods. |
 | card\_tarrif   | options are **BUSINESS-PAYS** and **CUSTOMER-PAYS** . Specify who pays the card charges. Set to BUSINESS-PAYS by default         |
 | mobile\_tarrif | options are **BUSINESS-PAYS** and **CUSTOMER-PAYS** . Specify who pays the mobile charges. Set to BUSINESS-PAYS by default       |
+| redirect\_url  | Optional URL where we should redirect the user on payment success                                                                |

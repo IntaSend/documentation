@@ -25,7 +25,8 @@ curl --location --request POST 'https://sandbox.intasend.com/api/v1/checkout/' \
     "email": "john@doe.com",
     "first_name": "John",
     "last_name": "Doe",
-    "country": "US"
+    "country": "US",
+    "redirect_url": "https://example.com"
 }'
 ```
 {% endtab %}
@@ -53,7 +54,8 @@ func main() {
     "email": "john@doe.com",
     "first_name": "John",
     "last_name": "Doe",
-    "country": "US"
+    "country": "US",
+    "redirect_url": "https://example.com"
 }`)
 
   client := &http.Client {
@@ -86,7 +88,8 @@ func main() {
 {% tab title="JavaScript" %}
 ```
 var axios = require('axios');
-var data = JSON.stringify({"public_key":"<YOUR-PUBLISHABLE-API-KEY>","amount":10,"currency":"USD","email":"john@doe.com","first_name":"John","last_name":"Doe","country":"US"});
+var data = JSON.stringify({"public_key":"<YOUR-PUBLISHABLE-API-KEY>","amount":10,"currency":"USD","email":"john@doe.com","first_name":"John","last_name":"Doe","country":"US",
+    "redirect_url": "https://example.com"});
 
 var config = {
   method: 'post',
@@ -130,7 +133,8 @@ curl_setopt_array($curl, array(
     "email": "john@doe.com",
     "first_name": "John",
     "last_name": "Doe",
-    "country": "US"
+    "country": "US",
+    "redirect_url": "https://example.com"
 }',
   CURLOPT_HTTPHEADER => array(
     'Content-Type: application/json'
@@ -158,7 +162,8 @@ payload={
   "email": "john@doe.com",
   "first_name": "John",
   "last_name": "Doe",
-  "country": "US"
+  "country": "US",
+  "redirect_url": "https://example.com"
 }
 headers = {
   'Content-Type': 'application/json'
@@ -241,7 +246,7 @@ function generateLink() {
 }
 ```
 
-Trigger the above function using on-click event. Here is a sample button for your reference.
+Trigger the above function using an on-click event. Here is a sample button for your reference.
 
 ```
 <button onclick="generateLink()">Pay now</button>
