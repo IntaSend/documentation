@@ -36,7 +36,7 @@ After the activate action, your plugin will be listed under the plugins section.
 
 ### 4. Complete Payments setting in WooCommerce
 
-After activation, the plugin will be automatically be added to your **WooCommerce Settings tab** under the** Payments section**. Please check the screenshot below.
+After activation, the plugin will be automatically be added to your **WooCommerce Settings tab** under the **Payments section**. Please check the screenshot below.
 
 ![](../.gitbook/assets/step-4.png)
 

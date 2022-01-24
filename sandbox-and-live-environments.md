@@ -20,13 +20,13 @@ Get started with our developer environment - so sign-up is required. Start exper
 
 Sign up for the **sandbox environment** for your development and testing.
 
-**Sign up URL:** [https://sandbox.intasend.com/](https://sandbox.intasend.com)` `
+**Sign up URL:** [https://sandbox.intasend.com/](https://sandbox.intasend.com) ``&#x20;
 
 **API base URL:** [https://sandbox.intasend.com/api/](https://sandbox.intasend.com/api/)
 
 ### **Live environment** for your production.
 
-**Sign up URL:** [https://payment.intasend.com/account/signup/](https://payment.intasend.com/account/signup/)` `
+**Sign up URL:** [https://payment.intasend.com/account/signup/](https://payment.intasend.com/account/signup/) ``&#x20;
 
 **API base URL:** [https://payment.intasend.com/api/](https://payment.intasend.com/account/signup/)
 
