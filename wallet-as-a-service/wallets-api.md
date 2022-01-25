@@ -61,21 +61,59 @@ Bearer <ACCESS-TOKEN>
 {% endswagger-response %}
 {% endswagger %}
 
+{% swagger method="get" path="/api/v1/wallets/:id/transactions/" baseUrl="https://sandbox.intasend.com" summary="Get wallet transactions" %}
+{% swagger-description %}
+Retrieve a list of all transactions made in the specified wallet.
+{% endswagger-description %}
+
+{% swagger-parameter in="header" name="Authorization" required="true" %}
+Bearer <ACCESS-TOKEN>
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Transactions list" %}
+```javascript
+[{
+    "invoice": "",
+    "value": "10.00",
+    "running_balance": "20.00",
+    "narrative": "Intra Txn. wallet 9",
+    "created_at": "2020-08-03T15:08:40.263322+03:00",
+    "updated_at": "2020-08-03T15:08:40.263349+03:00"
+}, {
+    "invoice": "",
+    "value": "10.00",
+    "running_balance": "10.00",
+    "narrative": "Intra Txn. wallet 9",
+    "created_at": "2020-08-03T15:08:32.283968+03:00",
+    "updated_at": "2020-08-03T15:08:32.283992+03:00"
+}]
+```
+{% endswagger-response %}
+{% endswagger %}
+
 {% swagger baseUrl="​ https://sandbox.intasend.com" path="/api/v1/wallets/" method="post" summary="Create a wallet" %}
 {% swagger-description %}
 Create a new wallet/sub-account
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
 Bearer <ACCESS-TOKEN>
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="wallet_type" type="string" %}
+{% swagger-parameter in="body" name="wallet_type" type="string" required="true" %}
 Available option: WORKING
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="currency" type="string" %}
+{% swagger-parameter in="body" name="currency" type="string" required="true" %}
 Available Options: KES, USD, GBP, EUR
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="label" required="true" %}
+New wallet identifier label e.g charges, owner name etc for easy querying on the dashboard
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="can_disburse" type="Boolean" %}
+If set to true, the wallet can be used to send money/withdraw to mobile money wallet with the API
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Sample successful response" %}
