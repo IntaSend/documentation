@@ -8,9 +8,9 @@ description: >-
 
 ## How to add IntaSend payments to your WooCommerce website
 
-IntaSend has built a secure payment gateway to power e-commerce sites. IntaSend is platform is secure and PCI-DSS compliant. We have built tools to make integration easier for businesses and developers.
+IntaSend has built a secure payment gateway to power e-commerce sites. IntaSend platform is secure and PCI-DSS compliant. We have built tools to make integration easier for businesses and developers.
 
-Ready to add payments to your site? Below is a step-by-step video and guide on how to integrate payment on WooCommerce. Feel free to also test our demo site here [http://54.86.135.148/](http://54.86.135.148).
+Ready to add payments to your site? Below is a step-by-step video and guide on how to integrate payment on WooCommerce.&#x20;
 
 {% embed url="https://www.loom.com/share/644db0fac41541008c5b7c3e4dffb6d4" %}
 How to setup and install IntaSend Plugin for WooCommerce
@@ -34,9 +34,9 @@ After the activate action, your plugin will be listed under the plugins section.
 
 ![](../.gitbook/assets/step-3.png)
 
-### 4. Complete Payments setting in WooCommerce
+### 4. Complete the Payments setting in WooCommerce
 
-After activation, the plugin will be automatically be added to your **WooCommerce Settings tab** under the **Payments section**. Please check the screenshot below.
+After activation, the plugin will automatically be added to your **WooCommerce Settings tab** under the **Payments section**. Please check the screenshot below.
 
 ![](../.gitbook/assets/step-4.png)
 
