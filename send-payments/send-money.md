@@ -55,11 +55,13 @@ KES
 {
     "tracking_id": "c1acf08c-5cc1-4b3e-b4a8-e43bc068aa56",
     "status": "Preview and approve",
+    "status_code": "BP101",
     "nonce": "1aiw02",
     "device_id": 1,
     "transactions": [
         {
             "status": "Pending",
+            "status_code": "TP101",
             "request_reference_id": "f6a5a8dc-e190-4707-8ea2-102919709a72",
             "name": null,
             "account": 254723890353,
@@ -68,6 +70,7 @@ KES
         },
         {
             "status": "Pending",
+            "status_code": "TP101",
             "request_reference_id": "cd763f35-44b3-4e89-a27a-252d507105f6",
             "name": null,
             "phone_number": 254708374149,
@@ -301,11 +304,13 @@ Here are more details on [how to sign the nonce](extra-payment-authentication.md
 {
     "tracking_id": "c1acf08c-5cc1-4b3e-b4a8-e43bc068aa56",
     "status": "Preview and approve",
+    "status_code": "BP101",
     "nonce": "1aiw02",
     "device_id": 1,
     "transactions": [
         {
             "status": "Pending",
+            "status_code": "TP101",
             "request_reference_id": "f6a5a8dc-e190-4707-8ea2-102919709a72",
             "name": null,
             "account": 254723890353,
@@ -326,10 +331,12 @@ Sample signed payload
 {
     "tracking_id": "c1acf08c-5cc1-4b3e-b4a8-e43bc068aa56",
     "status": "Preview and approve",
+    "status_code": "BP101",
     "nonce": "<SIGNED-NONCE-HEX>",
     "transactions": [
         {
             "status": "Pending",
+            "status_code": "TP101",
             "request_reference_id": "f6a5a8dc-e190-4707-8ea2-102919709a72",
             "name": null,
             "account": 254723890353,
