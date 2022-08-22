@@ -54,6 +54,25 @@ Transaction tracking_id returned from send money request
 {% endswagger-response %}
 {% endswagger %}
 
+### Status codes description
+
+#### Files status codes meaning
+
+| Code  | Description                                                  |
+| ----- | ------------------------------------------------------------ |
+| BP101 | New batch or request, reading in progress                    |
+| BF102 | Batch/request failed                                         |
+| BP103 | Batch/request waiting approval                               |
+| BP104 | Queued to check for float balance                            |
+| BF105 | Failed checking float balance                                |
+| BP106 | Float/balance check in progress                              |
+| BF107 | Failed advance float check issue                             |
+| BP108 | Advance internal validations in progress                     |
+| BP109 | Payment to beneficiary in progress                           |
+| BP110 | Sending payments to beneficiary in progress                  |
+| BC100 | Completed sending all transactions. Results ready for review |
+| BE111 | Batch/request ended or cancelled early.                      |
+
 #### Code examples
 
 {% tabs %}
