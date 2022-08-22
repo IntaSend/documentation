@@ -56,7 +56,7 @@ Transaction tracking_id returned from send money request
 
 ### Status codes description
 
-#### Files status codes meaning
+#### Files/Batch status codes meaning
 
 | Code  | Description                                                  |
 | ----- | ------------------------------------------------------------ |
@@ -72,6 +72,21 @@ Transaction tracking_id returned from send money request
 | BP110 | Sending payments to beneficiary in progress                  |
 | BC100 | Completed sending all transactions. Results ready for review |
 | BE111 | Batch/request ended or cancelled early.                      |
+
+#### Transaction Status (Itemized status codes)
+
+| Code  | Description                                                                     |
+| ----- | ------------------------------------------------------------------------------- |
+| TP101 | New transaction. Processing is pending                                          |
+| TP102 | Transaction processing started                                                  |
+| TF103 | Failed to initiate or process transaction. Check failed reason for more details |
+| TF104 | Transaction results processing in progress                                      |
+| TF105 | Transaction status cannot be determined. Contact support for further check.     |
+| TS100 | Transaction is successful                                                       |
+| TF106 | Transaction failed, see failed reasons for more details                         |
+| TH107 | Transaction is under observation                                                |
+| TC108 | Transaction canceled                                                            |
+| TR109 | Transaction is queued for retry                                                 |
 
 #### Code examples
 
